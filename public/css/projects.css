@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+header.projects {
+  background-color: rgba(5, 5, 5, 0.8);
+}
+
+header.disabled {
+  pointer-events: none;
+}
+
+header.projects .logo svg path:nth-of-type(3),
+header.projects .logo svg path:nth-of-type(2) {
+  fill: white;
+}
+
+header.projects nav menu .link_wrapper span,
+header.projects nav menu .link_wrapper p {
+  color: #fff;
+}
+
+header.projects nav menu .link_wrapper span:hover,
+header.projects nav menu .link_wrapper span:hover ~ .num-top {
+  color: grey;
+  cursor: pointer;
+}
+
+header.projects nav menu .link_wrapper span.on-page,
+header.projects nav menu .link_wrapper span.on-page ~ .num-top {
+  color: grey;
+}
+
+header.projects nav #menu-btn {
+  color: white;
+}
+
+#console_1.projects {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  top: 0;
+  z-index: 0;
+  background-color: #101010;
+}
+
+#console_1.projects:hover {
+  box-shadow: none;
+}
+
+.container * {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-shadow: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 20px 0 20px;
+  padding-top: 15vh;
+  position: absolute;
+}
+
+.container .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.container .heading {
+  margin-top: 50px;
+  width: max-content;
+  padding: 0 1em 50px;
+  animation: fade-in 0.5s ease forwards;
+}
+
+.container .heading * {
+  color: white;
+}
+
+.container .heading h3 {
+  font-size: 3em;
+  font-weight: bolder;
+  padding-bottom: 10px;
+  border-bottom: 3px solid whitesmoke;
+}
+
+.container .projects-menu {
+  display: flex;
+  width: 50%;
+  height: 10vh;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  animation: fade-in 0.5s ease forwards;
+}
+
+.container .projects-menu .filter {
+  font-size: 22px;
+  width: 15%;
+}
+
+.container .projects-menu .filter.active {
+  font-size: 25px;
+  width: 20%;
+  background-color: hsl(142 90% 61%);
+}
+
+.container .box .dream {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.container .box .dream .card {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  animation: fade-in-below 0.5s ease forwards;
+}
+
+.container .box .dream .card img {
+  opacity: 1;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+.container .box .dream .card:hover img {
+  opacity: 0.2;
+  filter: blur(4px);
+}
+
+.container .box .dream .card .upper-half {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  transform: translateY(-100%);
+  top: 0;
+  transition: all 500ms ease;
+}
+
+#home #console_1 .container .box .dream .card .upper-half h2 {
+  color: hsl(142 90% 61%);
+}
+
+.container .box .dream .card:hover .upper-half {
+  transform: translateY(0);
+  top: calc(45% - 1.5rem - 40px);
+}
+
+.container .box .dream .card .lower-half {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  transition: bottom 500ms ease;
+  bottom: 0;
+  opacity: 0;
+}
+
+.container .box .dream .card:hover .lower-half {
+  /* animation: fade-in-bottom 500ms ease forwards; */
+  bottom: calc(40% - 35px);
+  opacity: 1;
+}
+
+/* @keyframes fade-in-bottom {
+    0% {
+       bottom: 0;
+    }
+    100% {
+        bottom: 25%;
+    }
+} */
+
+.container .box .dream .card .lower-half button {
+  font-size: 24px;
+  border: 3px solid hsl(142 90% 61%);
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0 0.5em;
+}
+
+.container .box .dream .card .lower-half button:hover {
+  background-color: hsl(142 90% 61%);
+  color: black;
+}
+
+.container .btn {
+  margin: 40px 0 70px 0;
+  background: #222;
+  padding: 15px 40px;
+}
+
+.container .btn a {
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-below {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#console_1 .black-page {
+  width: 100vw;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  transform: translateX(100%);
+  z-index: 10;
+}
+
+#console_1 .black-page.activate {
+  /* animation: left-slide 5s ease-in-out forwards; */
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 319px) {
+  header.projects {
+    background-color: #000;
+  }
+
+  .container {
+    padding-top: 10vh;
+  }
+
+  .container .heading {
+    margin-top: 20px;
+    padding: 0 1em 20px;
+  }
+
+  .container .projects-menu {
+    height: 10vh;
+    width: 100%;
+  }
+
+  .container .projects-menu .filter {
+    font-size: 13px;
+    width: 25%;
+  }
+
+  .container .projects-menu .filter.active {
+    font-size: 13px;
+    width: 20%;
+    background-color: hsl(142 90% 61%);
+  }
+
+  .container .box .dream {
+    width: 100%;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half h2 {
+    font-size: 1rem;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half p {
+    font-size: 11px;
+  }
+
+  .container .box .dream .card .lower-half button {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  header.projects {
+    background-color: #000;
+  }
+
+  .container {
+    padding-top: 10vh;
+  }
+
+  .container .heading {
+    margin-top: 20px;
+    padding: 0 1em 20px;
+  }
+
+  .container .projects-menu {
+    height: 10vh;
+    width: 100%;
+  }
+
+  .container .projects-menu .filter {
+    font-size: 15px;
+    width: 25%;
+  }
+
+  .container .projects-menu .filter.active {
+    font-size: 15px;
+    width: 20%;
+    background-color: hsl(142 90% 61%);
+  }
+
+  .container .box .dream {
+    width: 100%;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half h2 {
+    font-size: 1.5rem;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half p {
+    font-size: 14px;
+  }
+
+  .container .box .dream .card .lower-half button {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 575px) {
+  header.projects {
+    background-color: #000;
+  }
+
+  .container {
+    padding-top: 10vh;
+  }
+
+  .container .heading {
+    margin-top: 20px;
+    padding: 0 1em 20px;
+  }
+
+  .container .projects-menu {
+    height: 10vh;
+    width: 80%;
+  }
+
+  .container .projects-menu .filter {
+    font-size: 17px;
+    width: 15%;
+  }
+
+  .container .projects-menu .filter.active {
+    font-size: 20px;
+    width: 20%;
+    background-color: hsl(142 90% 61%);
+  }
+
+  .container .box .dream {
+    width: 48%;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half h2 {
+    font-size: 1.2rem;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half p {
+    font-size: 11px;
+  }
+
+  .container .box .dream .card .lower-half button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  header.projects {
+    background-color: #000;
+  }
+  
+  .container {
+    padding-top: 10vh;
+  }
+
+  .container .heading {
+    margin-top: 20px;
+    padding: 0 1em 20px;
+  }
+
+  .container .projects-menu {
+    height: 10vh;
+    width: 80%;
+  }
+
+  .container .projects-menu .filter {
+    font-size: 18px;
+    width: 15%;
+  }
+
+  .container .projects-menu .filter.active {
+    font-size: 20px;
+    width: 20%;
+    background-color: hsl(142 90% 61%);
+  }
+
+  .container .box .dream {
+    width: 48%;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half h2 {
+    font-size: 1.4rem;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half p {
+    font-size: 13px;
+  }
+
+  .container .box .dream .card .lower-half button {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  
+  .container {
+    padding-top: 10vh;
+  }
+
+  .container .heading {
+    margin-top: 20px;
+    padding: 0 1em 20px;
+  }
+
+  .container .projects-menu {
+    height: 10vh;
+    width: 60%;
+  }
+
+  .container .projects-menu .filter {
+    font-size: 18px;
+    width: 10%;
+  }
+
+  .container .projects-menu .filter.active {
+    font-size: 20px;
+    width: 20%;
+    background-color: hsl(142 90% 61%);
+  }
+
+  .container .box .dream {
+    width: 32.5%;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half h2 {
+    font-size: 1.4rem;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half p {
+    font-size: 13px;
+  }
+
+  .container .box .dream .card .lower-half button {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  
+  .container {
+    padding-top: 10vh;
+  }
+
+  .container .heading {
+    margin-top: 20px;
+    padding: 0 1em 20px;
+  }
+
+  .container .projects-menu {
+    height: 10vh;
+    width: 60%;
+  }
+
+  .container .projects-menu .filter {
+    font-size: 18px;
+    width: 10%;
+  }
+
+  .container .projects-menu .filter.active {
+    font-size: 20px;
+    width: 20%;
+    background-color: hsl(142 90% 61%);
+  }
+
+  .container .box .dream {
+    width: 32.5%;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half h2 {
+    font-size: 1.5rem;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half p {
+    font-size: 14px;
+  }
+
+  .container .box .dream .card .lower-half button {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1400px) {}

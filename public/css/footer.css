@@ -1,0 +1,44 @@
+footer.skip {
+    position: absolute;
+    bottom: 0.5vh;
+    left: 1vw;
+}
+
+.skip * {
+    color: limegreen;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+#skip-animation {
+    cursor: pointer;
+    text-decoration: underline;
+    pointer-events: normal;
+}
+
+#skip-animation.inactive {
+    pointer-events: none;
+}
+
+#skip-animation.hidden {
+    display: none
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .skip * {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .skip * {
+        font-size: 17px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    .skip * {
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1400px) {}
