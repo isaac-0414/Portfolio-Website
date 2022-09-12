@@ -64,7 +64,7 @@ var txt = [
           }
         }, 200);
         // if page changes, stop process
-        if (currentPage !== about_btn || moreAboutMeOn === true) {
+        if (currentPage !== about_btn || moreAboutMeOn === true || single_console === true) {
           clearTimeout(console_2_timeout_id);
           console_2_timeout_id = undefined;
           txt_index = 0;

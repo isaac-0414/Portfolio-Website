@@ -4,9 +4,9 @@
 window.onload = main;
 
 async function main() {
-  // preloader().then(() => {
-  //   initialize();
-  // })
+  preloader().then(() => {
+    initialize();
+  })
 
   // wait 2s to prevent window resize at the first
   await wait(2000);
@@ -30,6 +30,7 @@ async function main() {
   ctx = bg_hacker.getContext("2d");
   p = Array(Math.floor(w / 10) + 1).fill(0);
   skip_animation.classList.remove("inactive");
-  initialize();
+  // initialize();
   backgroundAnimation();
+  bg_animation_activated = true;
 }

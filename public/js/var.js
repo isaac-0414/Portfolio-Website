@@ -9,6 +9,7 @@ var o; // orientation
 var last_w;
 var last_h;
 
+var bg_animation_activated = false; // becomes true after background animation starts
 var initializing = true; // true if initialize() is still running
 
 

@@ -301,3 +301,27 @@ header .msg {
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {}
+
+@media screen and (min-width: 1401px) {
+  #button-container {
+    height: 20%;
+  }
+
+  #button {
+    height: 10vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  #button h2 {
+    font-size: 1.8vw;
+  }
+  
+  #button::before {
+    height: 8vh;
+  }
+  
+  #button::after {
+    inset: 4px;
+  }
+}

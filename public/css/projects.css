@@ -521,3 +521,36 @@ header.projects nav #menu-btn {
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {}
+
+@media screen and (min-width: 1400px) {
+
+  .container .heading {
+    font-size: 1.8vw
+  }
+
+  .container .projects-menu .filter {
+    font-size: 1.4vw
+  }
+
+  .container .projects-menu .filter.active {
+    font-size: 1.4vw;
+    width: 20%;
+    background-color: hsl(142 90% 61%);
+  }
+
+  .container .box .dream {
+    width: 24%;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half h2 {
+    font-size: 1.5vw;
+  }
+
+  #home #console_1 .container .box .dream .card .upper-half p {
+    font-size: 1vw;
+  }
+
+  .container .box .dream .card .lower-half button {
+    font-size: 1.2vw;
+  }
+}

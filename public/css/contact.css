@@ -769,3 +769,66 @@
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {}
+
+@media screen and (min-width: 1401px) {
+    #console_1 .contact-container h1 {
+        font-size: 3.2vw;
+        margin-bottom: 15px;
+    }
+
+    #console_1 .contact-container .row100 .col {
+        margin: 4.3vh 0 1vh;
+    }
+    
+    #console_1 .contact-container .row100 .inputBox {
+        height: 4.3vh;
+    }
+
+    #console_1 .contact-container .row100 .inputBox input, #console_1 .contact-container .row100 .inputBox.textarea textarea {
+        font-size: 2.3vh;
+    }
+
+    #console_1 .contact-container .row100 .inputBox input:focus + .text, #console_1 .contact-container .row100 .inputBox input:valid + .text {
+        top: -4.3vh;
+        left: -1vh;
+    }
+    
+    #console_1 .contact-container .row100 .inputBox .text {
+        line-height: 4.3vh;
+        font-size: 2.3vh;
+    }
+
+    #console_1 .contact-container .row100 .inputBox.textarea {
+        height: 13vh;
+    }
+
+
+    #console_1.contact .contact-container p {
+        font-size: 2.3vh;
+        height: auto;
+        line-height: 1.5;
+    }
+
+
+    .social-icon-box {
+        width: 10vh;
+        height: 35vh;
+        display: flex;
+        top: 20vh;
+        left: 1.5vw;
+    }
+    
+    .social-icon-box .media-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 8vh;
+        height: 8vh;
+    }
+    
+    .social-icon-box .media-container i {
+        font-size: 5vh;
+        line-height: 8vh;
+        text-align: center;
+    }
+}

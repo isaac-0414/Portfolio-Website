@@ -17,7 +17,6 @@ window.addEventListener('resize', () => {
     // reset w and h
     w = start_w;
     h = start_h;
-    console.log(`w: ${w} h: ${h}`);
     if (w >= h) {
         o = "landscape";
     } else {
@@ -50,8 +49,6 @@ window.addEventListener('resize', () => {
     // the only thing needs to do when window resizes
     if (initializing === true) return;
 
-    console.log("get to after backgroud animation");
-
     if (w <= 768 || o === "portrait") {
         // if should only show one consle, set this variable to true to stop the animation at console 2
         single_console = true;
@@ -75,7 +72,6 @@ window.addEventListener('resize', () => {
         menu.classList.remove("inactive");
         if (currentPage === about_btn) {
             if (console_2_timeout_id === undefined && console_2_interval_id === undefined) {
-                console.log("get to console_2 auto type")
                 console2AutoType();
             }
         }

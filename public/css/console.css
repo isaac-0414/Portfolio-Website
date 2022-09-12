@@ -384,3 +384,26 @@
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {}
+
+@media screen and (min-width: 1401px) {
+  #console_1 h1 {
+    font-size: 3.5vw;
+  }
+
+  #home #console_1 h2 {
+    font-size: 1.8vw;
+  }
+
+  #console_1 p {
+    font-size: 1.4vw;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+  }
+  
+  #console_2 p {
+    font-size: 1.3vw;
+  }
+  #console_2 .fun-facts .text-container p {
+    font-size: 25px;
+  }
+}

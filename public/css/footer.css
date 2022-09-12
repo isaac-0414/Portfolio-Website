@@ -42,3 +42,9 @@ footer.skip {
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {}
+
+@media screen and (min-width: 1401px) {
+    .skip * {
+        font-size: 2.3vh;
+    }
+}
