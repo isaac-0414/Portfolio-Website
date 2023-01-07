@@ -169,14 +169,14 @@ const contact_content = `
           <div class="row100">
             <div class="col">
               <div class="inputBox">
-                <input type="text" name="" required="required" />
+                <input id="first_name" type="text" name="" required />
                 <span class="text">First Name</span>
                 <span class="line"></span>
               </div>
             </div>
             <div class="col">
               <div class="inputBox">
-                <input type="text" name="" required="required" />
+                <input id="last_name" type="text" name="" required />
                 <span class="text">Last Name</span>
                 <span class="line"></span>
               </div>
@@ -185,14 +185,14 @@ const contact_content = `
           <div class="row100">
             <div class="col">
               <div class="inputBox">
-                <input type="text" name="" required="required" />
+                <input id="email_id" type="text" name="" required />
                 <span class="text">Email</span>
                 <span class="line"></span>
               </div>
             </div>
             <div class="col">
               <div class="inputBox">
-                <input type="text" name="" required="required" />
+                <input id="phone_id" type="text" name="" required />
                 <span class="text">Phone</span>
                 <span class="line"></span>
               </div>
@@ -201,7 +201,7 @@ const contact_content = `
           <div class="row100">
             <div class="col">
               <div class="inputBox textarea">
-                <textarea required="required"></textarea>
+                <textarea id="message" required></textarea>
                 <span class="text">Type your message here...</span>
                 <span class="line"></span>
               </div>
@@ -209,13 +209,13 @@ const contact_content = `
           </div>
           <div class="row100">
             <div class="col">
-              <input type="submit" value="Send" />
+              <input type="submit" value="Send" onclick="sendMail()" />
             </div>
           </div>
           <div class="row100">
             <p>
               Straight shot to my inbox:
-              <a href="isaaczheng0414@gmail.com">isaaczheng0414@gmail.com</a>
+              <a href="mailto: isaaczheng0414@gmail.com">isaaczheng0414@gmail.com</a>
             </p>
           </div>
         </div>`;

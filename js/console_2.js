@@ -1,4 +1,5 @@
 // ANIMAITON AT CONSOLE 2
+
 // fake code to pretend I'm working
 var txt = [
     "FORCE: XX0022. ENCYPT://000.222.2345",

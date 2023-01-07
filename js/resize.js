@@ -39,7 +39,7 @@ window.addEventListener('resize', () => {
     if (start_w !== window.innerWidth || start_h !== window.innerHeight) {
         return;
     }
-    // not start background animation when at project page since animation will atart when leaving
+    // not start background animation when at project page since animation will start when leaving
     // project page, starting the animation two times will mess up the program
     if (currentPage !== projects_btn) {
         backgroundAnimation();

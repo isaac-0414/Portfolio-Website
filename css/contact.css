@@ -137,6 +137,10 @@
     border-radius: 2px;
 }
 
+#console_1 .contact-container .row100 input[type="submit"]:hover {
+    background: white;
+}
+
 #console_1.contact .contact-container p {
     font-size: 20px;
     height: 28px;
@@ -144,6 +148,10 @@
     padding-left: 10px;
     padding-right: 10px;
     color: limegreen;
+}
+
+#console_1.contact .contact-container p a:hover {
+    color: white;
 }
 
 
@@ -183,6 +191,11 @@
     font-size: 40px;
     line-height: 50px;
     text-align: center;
+    transition: all 0.5s ease;
+}
+
+.social-icon-box .media-container i:hover {
+    transform: scale(1.1);
 }
 
 

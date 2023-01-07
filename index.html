@@ -7,12 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Isaac Zheng | Web Developer</title>
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
     <link rel="stylesheet" href="css/main.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('EB3yqqawEAHOzY5_B');
+        })();
+    </script>
   </head>
   <body>
     <!-- preloader -->
@@ -148,19 +155,29 @@
       <!-- social icons that only appears at contact page -->
       <div class="social-icon-box inactive">
         <div class="media-container">
-          <i class="bx bxl-twitter"></i>
+          <a href="https://twitter.com/IsaacZheng6" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-twitter"></i>
+          </a>
         </div>
         <div class="media-container">
-          <i class="bx bxl-facebook-square"></i>
+          <a href="https://www.facebook.com/profile.php?id=100081058492090" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-facebook-square"></i>
+          </a>
         </div>
         <div class="media-container">
-          <i class="bx bxl-linkedin"></i>
+          <a href="https://www.linkedin.com/in/zhiheng-zheng-623387235" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-linkedin"></i>
+          </a>
         </div>
         <div class="media-container">
-          <i class="bx bxl-github"></i>
+          <a href="https://github.com/isaac-0414" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-github"></i>
+          </a>
         </div>
         <div class="media-container">
-          <i class="bx bxl-instagram-alt"></i>
+          <a href="https://www.instagram.com/lssaczheng/" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-instagram-alt"></i>
+          </a>
         </div>
       </div>
 
@@ -195,5 +212,6 @@
     <script src="js/typewritter.js"></script>
     <script src="js/console_2.js"></script>
     <script src="js/clear.js"></script>
+    <script src="js/email.js"></script>
   </body>
 </html>
