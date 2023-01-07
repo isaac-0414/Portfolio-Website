@@ -32,7 +32,7 @@
 
 #home.init .console * {
   color: limegreen;
-  font-family: monospace !important;
+  font-family: "Courier New", Courier, monospace !important;
 }
 
 #home .console:hover {
@@ -387,15 +387,15 @@
 
 @media screen and (min-width: 1401px) {
   #console_1 h1 {
-    font-size: 3.5vw;
+    font-size: calc(4vh + 1.5vw);
   }
 
   #home #console_1 h2 {
-    font-size: 1.8vw;
+    font-size: calc(2vh + 0.75vw);
   }
 
   #console_1 p {
-    font-size: 1.4vw;
+    font-size: calc(1.6vh + 0.6vw);
     letter-spacing: 0.05em;
     line-height: 1.5;
   }
