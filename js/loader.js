@@ -227,7 +227,7 @@ const more_about_me_content = `
         </div>
         <div class="fun-facts">
           <div class="image-container">
-            <img src="/images/ski.jpg" alt="picture of myself">
+            <img src="images/ski.jpg" alt="picture of myself">
           </div>
           <div class="text-container">
             <p>I am a pre-Engineering major student right now, and I am working on transferring to CS major. </p>

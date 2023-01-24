@@ -495,9 +495,9 @@
   }
 }
 
-@media screen and (min-width: 1201px) and (max-width: 1400px) {}
+@media screen and (min-width: 1201px) and (max-width: 1823px) {}
 
-@media screen and (min-width: 1401px) {
+@media screen and (min-width: 1824px) {
   .skill-container {
     margin-left: 5%;
   }
