@@ -103,12 +103,17 @@ header.projects nav #menu-btn {
 
 .container .projects-menu .filter {
   font-size: 22px;
-  width: 15%;
+  width: 20%;
 }
 
 .container .projects-menu .filter.active {
   font-size: 25px;
   width: 20%;
+  background-color: hsl(142 90% 61%);
+}
+
+.container .projects-menu .filter:hover {
+  cursor: pointer;
   background-color: hsl(142 90% 61%);
 }
 

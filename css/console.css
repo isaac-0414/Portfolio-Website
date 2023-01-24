@@ -383,9 +383,9 @@
   }
 }
 
-@media screen and (min-width: 1201px) and (max-width: 1400px) {}
+@media screen and (min-width: 1201px) and (max-width: 1440px) {}
 
-@media screen and (min-width: 1401px) {
+@media screen and (min-width: 1441px) {
   #console_1 h1 {
     font-size: calc(4vh + 1.5vw);
   }
