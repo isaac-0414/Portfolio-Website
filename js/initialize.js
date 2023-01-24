@@ -65,21 +65,27 @@ async function initialize() {
     if (w <= 768 || o === "portrait") {
       await wait(1000);
     }
-    typeWriter(p_text, "p", 50).then((res) => {
-      // stop auto scroll
-      if (scrollStopId != undefined) {
-        clearInterval(scrollStopId);
-        scrollStopId = undefined;
-      }
-      // after the introduction finished typing, change color of text
-      console_1.innerHTML = `<h2>${h2_text}</h2>
-      <h1>${h1_text_revised}</h1>
-      <p>${p_text}</p>`;
-      home.classList.remove("init");
-    });
-    await wait(9000);
-    autoScroll();
-    await wait(1000);
+
+    wait(2000).then((res)=> {
+      console.log("start scroll");
+      autoScroll();
+    })
+
+    await typeWriter(p_text, "p", 50);
+
+    skip_animation.classList.add("hidden"); // hide the skip-animation button
+
+    // stop auto scroll
+    if (scrollStopId != undefined) {
+      console.log("stop scroll");
+      clearInterval(scrollStopId);
+      scrollStopId = undefined;
+    }
+    // after the introduction finished typing, change color of text
+    console_1.innerHTML = `<h2>${h2_text}</h2>
+    <h1>${h1_text_revised}</h1>
+    <p>${p_text}</p>`;
+    home.classList.remove("init");
     // show the 'go to portfolio' btn
     portfolio_btn.classList.remove("hidden");
 
@@ -89,7 +95,6 @@ async function initialize() {
     // show to site logo
     logo.classList.remove("hidden");
 
-    skip_animation.classList.add("hidden"); // hide the skip-animation button
     initializing = false;
 
   } catch (e) { // this whole section is handling skip animation
@@ -97,6 +102,15 @@ async function initialize() {
       skip_animation.classList.add("hidden"); // hide the skip-animation button
 
       skip = false; // disallow skip from influencing the second console
+
+      // stop auto scroll
+      wait(2500).then((res)=> {
+        if (scrollStopId != undefined) {
+          console.log("stop scroll");
+          clearInterval(scrollStopId);
+          scrollStopId = undefined;
+        }
+      })
 
       // same as about_btn.onclick
       modifyCurrentPage(about_btn);
@@ -124,6 +138,7 @@ async function initialize() {
         document.querySelector("#button h2").innerText = "More about me";
         portfolio_btn.onclick = moreAboutMe;
       }
+      
       home.classList.remove("init");
       initializing = false;
     }

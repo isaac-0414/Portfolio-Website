@@ -122,6 +122,10 @@ projects_btn.onclick = async function () {
   });
   projects_btn.classList.add("on-page");
   header.classList.remove("disabled");
+  // NOTICE THIS PAGE IS STILL UNDER CONSTRUCTION
+  alert("This page is not finished yet.")
+  // hide the button container
+  document.querySelector("#button-container").classList.add("hidden");
 };
 
 resume_btn.onclick = function () {
@@ -160,6 +164,7 @@ contact_btn.onclick = async function () {
 
 
 async function quitProjects() {
+  document.querySelector("#button-container").classList.remove("hidden");
   header.classList.add("disabled");
   let black_page = document.querySelector("#console_1 .black-page");
   black_page.classList.add("activate");

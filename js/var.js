@@ -57,9 +57,7 @@ about_btn.classList.add("on-page");
 var h2_text = "Hello World, I'm Isaac Zheng";
 var h1_text =
   "A Frontend Web Developer. I deliver quality solutions to the clients";
-var p_text = `I'm a student at University of Illinois at Urbana-Champaign.
-    I have serious passion for UI effects, animations and creating fast and responsive website, 
-    using my knowledge in frontend engineering and web3 development.`;
+var p_text = `I'm a student at University of Illinois at Urbana-Champaign learning Computer Science. I have serious passion for UI effects, animations and creating fast and responsive website, using my knowledge in frontend web development.`;
 
 
 var h1_text_revised = `A <span>Frontend Web Developer.</span> I deliver <span>quality solutions</span> to the clients`;

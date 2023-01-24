@@ -230,7 +230,7 @@ const more_about_me_content = `
             <img src="images/ski.jpg" alt="picture of myself">
           </div>
           <div class="text-container">
-            <p>I am a pre-Engineering major student right now, and I am working on transferring to CS major. </p>
+            <p>I am a CS major student right now, and I am also working on Statistics Minor. </p>
             <p>I am still actively learning new web technologies and learning game dev as well</p>
             <p>I like <span>cycling</span> very much, and I play <span>piano</span> at free time. I am a big fan of <span>Asian food and Indian food</span></p>
           </div>

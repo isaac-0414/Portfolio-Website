@@ -11,7 +11,7 @@
 }
 
 #button-container.hidden {
-  display: hidden;
+  display: none;
 }
 
 #button {
