@@ -122,10 +122,10 @@ projects_btn.onclick = async function () {
   });
   projects_btn.classList.add("on-page");
   header.classList.remove("disabled");
-  // NOTICE THIS PAGE IS STILL UNDER CONSTRUCTION
-  alert("This page is not finished yet.")
   // hide the button container
   document.querySelector("#button-container").classList.add("hidden");
+  // NOTICE THIS PAGE IS STILL UNDER CONSTRUCTION
+  wait(1000).then(res => alert("This page is not finished yet."))
 };
 
 resume_btn.onclick = function () {

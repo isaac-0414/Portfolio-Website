@@ -1,7 +1,7 @@
 //BACKGROUND ANIMATION
 bg_hacker = document.getElementById("bg_hacker");
 
-var ctx = bg_hacker.getContext("2d");
+var ctx;
 
 // an zero array /w length w/10
 var p; // = Array(Math.floor(w / 10) + 1).fill(0);

@@ -4,10 +4,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1" />
     <title>Isaac Zheng | Web Developer</title>
     <link rel="icon" href="favicon.ico" />
+    
+    <link rel="stylesheet" href="css/normalize.css" />
+
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/console.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/button.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
@@ -181,9 +192,9 @@
       </div>
 
       <!-- the two consoles, and loader.js load the content for each page -->
-      <div id="console_1" class="console middle"></div>
+        <div id="console_1" class="console middle"></div>
 
-      <div id="console_2" class="console middle hidden"></div>
+        <div id="console_2" class="console middle hidden"></div>
 
       <!-- the button at the bottom of the page -->
       <div id="button-container">
@@ -196,8 +207,9 @@
         <p id="skip-animation" class="inactive">Skip Animation --></p>
       </footer>
       <!-- the hacker animation background -->
-      <canvas id="bg_hacker"></canvas>
+      
     </div>
+    <canvas id="bg_hacker"></canvas>
 
     <script src="js/var.js"></script>
     <script src="js/preloader.js"></script>
