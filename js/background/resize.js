@@ -2,21 +2,31 @@
 
 var single_console = false;
 
-window.addEventListener('resize', () => {
-    let start_w = window.innerWidth;
-    let start_h = window.innerHeight;
+function debounce(fn, ms) {
+    let timer
+    return () => {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+            timer = null
+            fn.apply(this, arguments)
+        }, ms)
+    };
+}
+
+const debouncedHandleResize = debounce(handleResize, 1000)
+window.addEventListener('resize', debouncedHandleResize);
+
+function handleResize () {
+    // if it turns out that w and h doesn't change, quit the function
+    if (w === window.innerWidth && h === window.innerHeight)
+        return;
+    
+    let w = window.innerWidth;
+    let h = window.innerHeight;
     clearInterval(background_timer);
     background_timer = undefined;
     ctx.clearRect(0, 0, w, h);
-    
-    // check if during excecution time window width and height has changed again
-    if (start_w !== window.innerWidth || start_h !== window.innerHeight) {
-        return;
-    }
 
-    // reset w and h
-    w = start_w;
-    h = start_h;
     if (w >= h) {
         o = "landscape";
     } else {
@@ -35,10 +45,6 @@ window.addEventListener('resize', () => {
     // reset the p array of background.js
     p = Array(Math.floor(w / 10) + 1).fill(0);
 
-    // quit the function if during excecution time window width and height has changed again
-    if (start_w !== window.innerWidth || start_h !== window.innerHeight) {
-        return;
-    }
     // not start background animation when at project page since animation will start when leaving
     // project page, starting the animation two times will mess up the program
     if (currentPage !== projects_btn) {
@@ -85,6 +91,4 @@ window.addEventListener('resize', () => {
             loadProjects();
         }
     }
-    last_w = w;
-    last_h = h;
-});
+}

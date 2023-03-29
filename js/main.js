@@ -13,8 +13,6 @@ async function main() {
   // load w, h, ctx, p for background animation
   w = window.innerWidth;
   h = window.innerHeight;
-  last_w = w;
-  last_h = h;
   if (w >= h) {
     o = "landscape";
   } else {
