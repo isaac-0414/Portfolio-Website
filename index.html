@@ -1,40 +1,30 @@
 <!-- created by Isaac Zheng at August 2022 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1" />
-    <title>Isaac Zheng | Web Developer</title>
-    <link rel="icon" href="favicon.ico" />
-    
-    <link rel="stylesheet" href="css/normalize.css" />
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1" />
+   <title>Isaac Zheng | Web Developer</title>
+   <link rel="icon" href="favicon.ico" />
 
-    <link rel="stylesheet" href="css/app.css" />
-
-    <link
+   <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
-    />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('EB3yqqawEAHOzY5_B');
-        })();
-    </script>
-  </head>
-  <body>
-    <!-- preloader -->
-    <section>
+   />
+   <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+   <!-- preloader -->
+   <section>
       <div class="loader"></div>
       <div class="count"></div>
-    </section>
-    <div id="home" class="init">
+   </section>
+   <div id="home" class="init">
       <!-- header including site logo and nav menu -->
       <header class="hidden">
-        <div class="logo hidden">
-          <svg
+      <div class="logo hidden">
+         <svg
             version="1.1"
             id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -45,19 +35,19 @@
             viewBox="0 0 3400 2346"
             enable-background="new 0 0 3400 2346"
             xml:space="preserve"
-          >
+         >
             <path
-              fill="#000000"
-              opacity="1.000000"
-              stroke="none"
-              d="
-          M2198.000000,2348.000000 
+            fill="#000000"
+            opacity="1.000000"
+            stroke="none"
+            d="
+         M2198.000000,2348.000000 
             C1465.333496,2348.000000 733.666931,2348.000000 2.000295,2348.000000 
             C2.000196,1566.000244 2.000196,784.000549 2.000098,2.000609 
             C1135.332886,2.000406 2268.665771,2.000406 3401.999023,2.000203 
             C3401.999268,783.999329 3401.999268,1565.998657 3401.999512,2347.999023 
             C3001.000000,2348.000000 2600.000000,2348.000000 2198.000000,2348.000000 
-          M1175.344238,2115.509766 
+         M1175.344238,2115.509766 
             C1175.344238,2115.509766 1174.609741,2115.815186 1174.359497,2113.979736 
             C1174.351196,2109.979248 1174.335815,2105.978760 1174.335815,2101.978271 
             C1174.334717,1473.693726 1174.334717,845.409119 1174.334595,217.124527 
@@ -73,20 +63,20 @@
             C1506.691406,1583.509155 1458.603516,1660.880859 1410.639526,1738.329346 
             C1341.671021,1849.694336 1272.795288,1961.116821 1203.810303,2072.471680 
             C1194.743652,2087.106934 1185.267090,2101.488770 1175.344238,2115.509766 
-          M1240.334839,314.999847 
+         M1240.334839,314.999847 
             C1240.334839,591.561829 1240.334839,868.123779 1240.334839,1145.174805 
             C1700.843018,1145.174805 2160.352295,1145.174805 2620.356201,1145.174805 
             C2814.529785,831.419006 3009.200195,517.839111 3203.766357,202.819580 
             C2548.379395,202.819580 1894.862183,202.819580 1240.334839,202.819580 
             C1240.334839,239.863998 1240.334839,276.431915 1240.334839,314.999847 
-          z"
+         z"
             />
             <path
-              fill="#32CD32"
-              opacity="1.000000"
-              stroke="none"
-              d="
-          M1175.980225,2115.987793 
+            fill="#32CD32"
+            opacity="1.000000"
+            stroke="none"
+            d="
+         M1175.980225,2115.987793 
             C1185.267090,2101.488770 1194.743652,2087.106934 1203.810303,2072.471680 
             C1272.795288,1961.116821 1341.671021,1849.694336 1410.639526,1738.329346 
             C1458.603516,1660.880859 1506.691406,1583.509155 1554.667603,1506.068359 
@@ -102,120 +92,108 @@
             C1174.334717,845.409119 1174.334717,1473.693726 1174.335815,2101.978271 
             C1174.335815,2105.978760 1174.351196,2109.979248 1174.309570,2115.443359 
             C1174.833252,2116.600830 1175.406738,2116.294189 1175.980225,2115.987793 
-          z"
+         z"
             />
             <path
-              fill="#32CD32"
-              opacity="1.000000"
-              stroke="none"
-              d="
-          M1240.334839,313.999817 
+            fill="#32CD32"
+            opacity="1.000000"
+            stroke="none"
+            d="
+         M1240.334839,313.999817 
             C1240.334839,276.431915 1240.334839,239.863998 1240.334839,202.819580 
             C1894.862183,202.819580 2548.379395,202.819580 3203.766357,202.819580 
             C3009.200195,517.839111 2814.529785,831.419006 2620.356201,1145.174805 
             C2160.352295,1145.174805 1700.843018,1145.174805 1240.334839,1145.174805 
             C1240.334839,868.123779 1240.334839,591.561829 1240.334839,313.999817 
-          z"
+         z"
             />
             <path
-              fill="#404040"
-              opacity="1.000000"
-              stroke="none"
-              d="
-          M1175.662231,2115.748779 
+            fill="#404040"
+            opacity="1.000000"
+            stroke="none"
+            d="
+         M1175.662231,2115.748779 
             C1175.406738,2116.294189 1174.833252,2116.600830 1174.434814,2116.361328 
             C1174.609741,2115.815186 1175.344238,2115.509766 1175.662231,2115.748779 
-          z"
+         z"
             />
-          </svg>
-        </div>
-        <nav>
-          <menu class="inactive">
+         </svg>
+      </div>
+      <nav>
+         <menu class="inactive">
             <div class="link_wrapper">
-              <span id="about">// About</span>
-              <p class="num-top">01</p>
+            <span id="about">// About</span>
+            <p class="num-top">01</p>
             </div>
             <div class="link_wrapper">
-              <span id="skills">// Skills</span>
-              <p class="num-top">02</p>
+            <span id="skills">// Skills</span>
+            <p class="num-top">02</p>
             </div>
             <div class="link_wrapper">
-              <span id="projects">// Projects</span>
-              <p class="num-top">03</p>
+            <span id="projects">// Projects</span>
+            <p class="num-top">03</p>
             </div>
             <div class="link_wrapper">
-              <span id="resume">// Resume</span>
-              <p class="num-top">04</p>
+            <span id="resume">// Resume</span>
+            <p class="num-top">04</p>
             </div>
             <div class="link_wrapper">
-              <span id="contact">// Contact</span>
-              <p class="num-top">05</p>
+            <span id="contact">// Contact</span>
+            <p class="num-top">05</p>
             </div>
-          </menu>
-          <i class="bx bx-menu inactive" id="menu-btn"></i>
-        </nav>
+         </menu>
+         <i class="bx bx-menu inactive" id="menu-btn"></i>
+      </nav>
       </header>
       <!-- social icons that only appears at contact page -->
       <div class="social-icon-box inactive">
-        <div class="media-container">
-          <a href="https://twitter.com/IsaacZheng6" target="_blank" rel="noopener noreferrer">
+      <div class="media-container">
+         <a href="https://twitter.com/IsaacZheng6" target="_blank" rel="noopener noreferrer">
             <i class="bx bxl-twitter"></i>
-          </a>
-        </div>
-        <div class="media-container">
-          <a href="https://www.facebook.com/profile.php?id=100081058492090" target="_blank" rel="noopener noreferrer">
+         </a>
+      </div>
+      <div class="media-container">
+         <a href="https://www.facebook.com/profile.php?id=100081058492090" target="_blank" rel="noopener noreferrer">
             <i class="bx bxl-facebook-square"></i>
-          </a>
-        </div>
-        <div class="media-container">
-          <a href="https://www.linkedin.com/in/zhiheng-zheng-623387235" target="_blank" rel="noopener noreferrer">
+         </a>
+      </div>
+      <div class="media-container">
+         <a href="https://www.linkedin.com/in/zhiheng-zheng-623387235" target="_blank" rel="noopener noreferrer">
             <i class="bx bxl-linkedin"></i>
-          </a>
-        </div>
-        <div class="media-container">
-          <a href="https://github.com/isaac-0414" target="_blank" rel="noopener noreferrer">
+         </a>
+      </div>
+      <div class="media-container">
+         <a href="https://github.com/isaac-0414" target="_blank" rel="noopener noreferrer">
             <i class="bx bxl-github"></i>
-          </a>
-        </div>
-        <div class="media-container">
-          <a href="https://www.instagram.com/lssaczheng/" target="_blank" rel="noopener noreferrer">
+         </a>
+      </div>
+      <div class="media-container">
+         <a href="https://www.instagram.com/lssaczheng/" target="_blank" rel="noopener noreferrer">
             <i class="bx bxl-instagram-alt"></i>
-          </a>
-        </div>
+         </a>
+      </div>
       </div>
 
       <!-- the two consoles, and loader.js load the content for each page -->
-        <div id="console_1" class="console middle"></div>
+      <div id="console_1" class="console middle"></div>
 
-        <div id="console_2" class="console middle hidden"></div>
+      <div id="console_2" class="console middle hidden"></div>
 
       <!-- the button at the bottom of the page -->
       <div id="button-container">
-        <div id="button" class="hidden">
-          <h2>Go to Portfolio</h2>
-        </div>
+      <div id="button" class="hidden">
+         <h2>Go to Portfolio</h2>
+      </div>
       </div>
       <!-- skip animation button when website is initializing -->
       <footer class="skip">
-        <p id="skip-animation" class="inactive">Skip Animation --></p>
+      <p id="skip-animation" class="inactive">Skip Animation --></p>
       </footer>
       <!-- the hacker animation background -->
       
-    </div>
-    <canvas id="bg_hacker"></canvas>
-
-    <script src="js/var.js"></script>
-    <script src="js/preloader.js"></script>
-    <script src="js/background/resize.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/background/background.js"></script>
-    <script src="js/utilities/auto-scroll.js"></script>
-    <script src="js/initialize.js"></script>
-    <script src="js/onclick.js"></script>
-    <script src="js/loader.js"></script>
-    <script src="js/utilities/typewritter.js"></script>
-    <script src="js/utilities/console_2.js"></script>
-    <script src="js/utilities/clear.js"></script>
-    <script src="js/utilities/email.js"></script>
-  </body>
+   </div>
+   <canvas id="bg_hacker"></canvas>
+   
+   <script type="module" src="dist/bundle.js"></script>
+</body>
 </html>

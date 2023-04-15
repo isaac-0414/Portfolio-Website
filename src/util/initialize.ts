@@ -1,25 +1,34 @@
+import { console_1, console_2, header, menu, portfolio_btn, btn_ls, about_btn, skip_animation, home, logo, menu_btn } from "../global/elements";
+import { h1_text, h2_text, h1_text_revised, p_text } from "../global/text";
+import { getW, getO, Orientation } from "../global/window_size";
+import { console2AutoType } from "../util/console2";
+import { getCurrentPage, setCurrentPage, Page, setIsInitializing, skipped, setSkip } from "../global/globalStates";
+import { clearConsole } from "../util/clear";
+import { moreAboutMe } from "../components/moreAboutMe";
+import { typeWriter, deleter, cursorEnter, wait, remove, cursorBlinkOn, cursorBlinkOff } from "./typewriter";
+import { autoScroll, stopAutoScroll } from "./autoScroll";
+import { loadAbout } from "../components/about";
+
 //INITIALIZE THE WEB PAGE
 
 var progress_text = "Progress: [....................]";
 var progress = document.createElement("h2");
 progress.innerText = progress_text;
 
-var portfolio_btn = document.querySelector("#button");
-
-async function initialize() {
-  initializing = true;
+export async function initialize() {
+  setIsInitializing(true);
   try {
     await typeWriter(h2_text, "h2", 200);
     await typeWriter(h1_text, "h1", 100);
     // do not show animation on mobile
-    if (w > 768 && o === "landscape") {
+    if (getW() > 768 && getO() === Orientation.landscape) {
       //add a horizontal break
       let br = document.createElement("br");
       console_1.append(br);
       //let cursor blink at the next line for 1 second
       cursorEle = cursorEnter("h2");
       await wait(1000);
-      cursorRemove(cursorEle);
+      remove(cursorEle);
 
       await typeWriter("***********************************", "h2", 20);
       await typeWriter(
@@ -46,27 +55,27 @@ async function initialize() {
       await wait(1000);
       cursorBlinkOn();
       //remove the red scanning alert
-      document.querySelector("header .msg").remove();
+      document.querySelector("header .msg")!.remove();
       await wait(1600);
       cursorBlinkOff();
 
       //delete all the other stuff at console1 except h1_text and h2_text
       progress.remove();
-      await deleter(document.querySelector("h2:last-of-type"), 50);
-      await deleter(document.querySelector("h2:last-of-type"), 50);
+      await deleter(document.querySelector("h2:last-of-type") as HTMLElement, 50);
+      await deleter(document.querySelector("h2:last-of-type") as HTMLElement, 50);
 
       // cursor blinking for another 0.5s
       var cursorEle = cursorEnter("h2");
       await wait(500);
-      cursor.remove(cursorEle);
+      remove(cursorEle);
       //remove horizontal break
       br.remove();
     }
-    if (w <= 768 || o === "portrait") {
+    if (getW() <= 768 || getO() === Orientation.portrait) {
       await wait(1000);
     }
 
-    wait(2000).then((res)=> {
+    wait(2000).then(()=> {
       console.log("start scroll");
       autoScroll();
     })
@@ -75,12 +84,7 @@ async function initialize() {
 
     skip_animation.classList.add("hidden"); // hide the skip-animation button
 
-    // stop auto scroll
-    if (scrollStopId != undefined) {
-      console.log("stop scroll");
-      clearInterval(scrollStopId);
-      scrollStopId = undefined;
-    }
+    stopAutoScroll();
     // after the introduction finished typing, change color of text
     console_1.innerHTML = `<h2>${h2_text}</h2>
     <h1>${h1_text_revised}</h1>
@@ -95,26 +99,21 @@ async function initialize() {
     // show to site logo
     logo.classList.remove("hidden");
 
-    initializing = false;
+    setIsInitializing(false);
 
-  } catch (e) { // this whole section is handling skip animation
+  } catch (e: any) { // this whole section is handling skip animation
     if (e.message === "SKIP") {
       skip_animation.classList.add("hidden"); // hide the skip-animation button
 
-      skip = false; // disallow skip from influencing the second console
+      setSkip(false); // disallow skip from influencing the second console
 
-      // stop auto scroll
-      wait(2500).then((res)=> {
-        if (scrollStopId != undefined) {
-          console.log("stop scroll");
-          clearInterval(scrollStopId);
-          scrollStopId = undefined;
-        }
+      wait(2500).then(() => {
+        stopAutoScroll
       })
 
       // same as about_btn.onclick
-      modifyCurrentPage(about_btn);
-      if (w > 768 && o === "landscape") {
+      setCurrentPage(Page.about);
+      if (getW() > 768 && getO() === Orientation.landscape) {
         console_1.classList.remove("middle", "contact");
         console_2.classList.remove("middle", "hidden");
       }
@@ -124,7 +123,7 @@ async function initialize() {
       logo.classList.remove("hidden");
       // if the red scanning warning is still there, remove it.
       document.querySelector("header .msg") &&
-        document.querySelector("header .msg").remove();
+        document.querySelector("header .msg")!.remove();
       await clearConsole();
       loadAbout();
       btn_ls.forEach((btn) => {
@@ -133,27 +132,27 @@ async function initialize() {
       about_btn.classList.add("on-page");
       menu_btn.classList.remove("inactive");
       
-      if (w > 768 && o === "landscape") {
+      if (getW() > 768 && getO() === Orientation.landscape) {
         menu.classList.remove("inactive");
-        document.querySelector("#button h2").innerText = "More about me";
+        (document.querySelector("#button h2") as HTMLHeadingElement).innerText = "More about me";
         portfolio_btn.onclick = moreAboutMe;
       }
       
       home.classList.remove("init");
-      initializing = false;
+      setIsInitializing(false);
     }
   }
 }
 
 // Progress: [######...........] (dot becomes #)
 function progressAnimation() {
-  return new Promise((resovle, reject) => {
+  return new Promise((resolve, reject) => {
     let i = 11;
     function progressAnimationHelper() {
       var timeout_interval = setTimeout(() => {
         //return if animation ends
         if (i === progress_text.length - 1) {
-          resovle();
+          resolve(null);
           return;
         }
 
@@ -168,12 +167,12 @@ function progressAnimation() {
         progressAnimationHelper();
       }, 100);
       // if page changes, stop process
-      if (currentPage !== about_btn) {
+      if (getCurrentPage() !== Page.about) {
         clearTimeout(timeout_interval);
         return;
       }
       // if skip-animaiton clicked, stop process
-      if (skip === true) {
+      if (skipped() === true) {
         clearTimeout(timeout_interval);
         reject(new Error("SKIP"));
       }
