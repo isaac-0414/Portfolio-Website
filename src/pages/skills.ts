@@ -1,6 +1,21 @@
 import { getW, getO, Orientation } from "../global/window_size";
-import { console_1, console_2, menu, social_icon_box, portfolio_btn, skills_btn, btn_ls, btn_text } from "../global/elements";
-import { getCurrentPage, setCurrentPage, Page, isMoreAboutMeOn, setMoreAboutMeOn } from "../global/globalStates";
+import {
+  console_1,
+  console_2,
+  menu,
+  social_icon_box,
+  portfolio_btn,
+  skills_btn,
+  btn_ls,
+  btn_text,
+} from "../global/elements";
+import {
+  getCurrentPage,
+  setCurrentPage,
+  Page,
+  isMoreAboutMeOn,
+  setMoreAboutMeOn,
+} from "../global/globalStates";
 import { goToProjects, quitProjects } from "./projects";
 import { clearConsole } from "../util/clear";
 
@@ -174,38 +189,38 @@ const skills_content_2 = `
 </div>`;
 
 export function loadSkills() {
-   if (getW() <= 768 || getO() === Orientation.portrait) {
-      console_1.innerHTML = skills_content_1 + skills_content_2;
-      return;
-   }
-   console_1.innerHTML = skills_content_1;
-   console_2.innerHTML = skills_content_2;
+  if (getW() <= 768 || getO() === Orientation.portrait) {
+    console_1.innerHTML = skills_content_1 + skills_content_2;
+    return;
+  }
+  console_1.innerHTML = skills_content_1;
+  console_2.innerHTML = skills_content_2;
 }
 
 export async function goToSkills() {
-   // if on mobile device, collapse the menu every time clicked a new button
-   if (getW() <= 768 || getO() === Orientation.portrait) {
-     menu.classList.add("inactive");
-   }
-   // if quitting from project page
-   if (getCurrentPage() === Page.projects) await quitProjects();
-   //if quitting from about page with more about me on
-   if (isMoreAboutMeOn() === true) setMoreAboutMeOn(false);
-   setCurrentPage(Page.skills);
-   social_icon_box.classList.add('inactive');
-   console_1.classList.remove("contact");
-   if (getW() > 768 && getO() === Orientation.landscape) {
-     // reset the two consoles
-     console_1.classList.remove("middle");
-     console_2.classList.remove("middle", "hidden");
-   }
-   portfolio_btn.classList.remove("hidden");
-   btn_text.innerText = "View my works";
-   portfolio_btn.onclick = goToProjects;
-   await clearConsole();
-   loadSkills();
-   btn_ls.forEach((btn) => {
-     btn.classList.remove("on-page");
-   });
-   skills_btn.classList.add("on-page");
+  // if on mobile device, collapse the menu every time clicked a new button
+  if (getW() <= 768 || getO() === Orientation.portrait) {
+    menu.classList.add("inactive");
+  }
+  // if quitting from project page
+  if (getCurrentPage() === Page.projects) await quitProjects();
+  //if quitting from about page with more about me on
+  if (isMoreAboutMeOn() === true) setMoreAboutMeOn(false);
+  setCurrentPage(Page.skills);
+  social_icon_box.classList.add("inactive");
+  console_1.classList.remove("contact");
+  if (getW() > 768 && getO() === Orientation.landscape) {
+    // reset the two consoles
+    console_1.classList.remove("middle");
+    console_2.classList.remove("middle", "hidden");
+  }
+  portfolio_btn.classList.remove("hidden");
+  btn_text.innerText = "View my works";
+  portfolio_btn.onclick = goToProjects;
+  await clearConsole();
+  loadSkills();
+  btn_ls.forEach((btn) => {
+    btn.classList.remove("on-page");
+  });
+  skills_btn.classList.add("on-page");
 }

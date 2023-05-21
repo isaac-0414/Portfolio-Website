@@ -85,7 +85,7 @@ header.projects nav #menu-btn {
 }
 
 .container .heading h3 {
-  font-size: 3em;
+  font-size: 4rem;
   font-weight: bolder;
   padding-bottom: 10px;
   border-bottom: 3px solid whitesmoke;
@@ -156,6 +156,11 @@ header.projects nav #menu-btn {
 
 #home #console_1 .container .box .dream .card .upper-half h2 {
   color: hsl(142 90% 61%);
+  font-size: 1.5rem;
+}
+
+#home #console_1 .container .box .dream .card .upper-half p {
+  font-size: 16px;
 }
 
 .container .box .dream .card:hover .upper-half {
@@ -179,7 +184,7 @@ header.projects nav #menu-btn {
 }
 
 .container .box .dream .card .lower-half button {
-  font-size: 24px;
+  font-size: 18px;
   border: 3px solid hsl(142 90% 61%);
   background-color: rgba(0, 0, 0, 0);
   padding: 0 0.5em;
@@ -417,15 +422,16 @@ header.projects nav #menu-btn {
   }
 
   #home #console_1 .container .box .dream .card .upper-half h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   #home #console_1 .container .box .dream .card .upper-half p {
-    font-size: 13px;
+    font-size: 10px;
+    margin: 5px 0 0 0;
   }
 
   .container .box .dream .card .lower-half button {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
@@ -461,15 +467,17 @@ header.projects nav #menu-btn {
   }
 
   #home #console_1 .container .box .dream .card .upper-half h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   #home #console_1 .container .box .dream .card .upper-half p {
-    font-size: 13px;
+    font-size: 11px;
+    margin: 5px 0 0 0;
+    line-height: 1.2;
   }
 
   .container .box .dream .card .lower-half button {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
@@ -517,9 +525,9 @@ header.projects nav #menu-btn {
   }
 }
 
-@media screen and (min-width: 1201px) and (max-width: 1400px) {}
+@media screen and (min-width: 1201px) and (max-width: 1920px) {}
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1920px) {
 
   .container .heading {
     font-size: 1.8vw

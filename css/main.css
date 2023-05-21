@@ -1,10 +1,12 @@
 /* created by Isaac Zheng at August 2022 */
+
 @import "normalize.css";
-@import "components/loader.css";
+@import "components/preloader.css";
 @import "layout/header.css";
 @import "pages/console.css";
 @import "pages/skills.css";
 @import "components/button.css";
+@import "components/modal.css";
 @import "pages/contact.css";
 @import "pages/projects.css";
 @import "layout/footer.css";
@@ -28,4 +30,16 @@ body {
   background-color: black;
   margin: 0;
   padding: 0;
+}
+
+#home {
+  /* use fixed position to fix 100vh longer than screen problem on mobile,
+  This is the same as 100vh and 100vw */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* this line below fixes the z-index bug of safari*/
+  transform: translate3d(0, 0, 0);
 }

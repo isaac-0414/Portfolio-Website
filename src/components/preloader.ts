@@ -4,12 +4,11 @@ export function preloader() {
       var counter = setInterval(function() {
          if (count < 101) {
             (document.querySelector('.count') as HTMLDivElement).innerText = count + '%';
-            (document.querySelector('.loader') as HTMLDivElement).style.width = count + '%';
             count++;
          } else {
             clearInterval(counter);
             resolve(null);
          }
-      }, 80);
+      }, 50);
    })
 }

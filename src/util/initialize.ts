@@ -1,13 +1,39 @@
-import { console_1, console_2, header, menu, portfolio_btn, btn_ls, about_btn, skip_animation, home, logo, menu_btn } from "../global/elements";
+import {
+  console_1,
+  console_2,
+  header,
+  menu,
+  portfolio_btn,
+  btn_ls,
+  about_btn,
+  skip_animation,
+  home,
+  logo,
+  menu_btn,
+} from "../global/elements";
 import { h1_text, h2_text, h1_text_revised, p_text } from "../global/text";
 import { getW, getO, Orientation } from "../global/window_size";
 import { console2AutoType } from "../util/console2";
-import { getCurrentPage, setCurrentPage, Page, setIsInitializing, skipped, setSkip } from "../global/globalStates";
+import {
+  getCurrentPage,
+  setCurrentPage,
+  Page,
+  setIsInitializing,
+  skipped,
+  setSkip,
+} from "../global/globalStates";
 import { clearConsole } from "../util/clear";
 import { moreAboutMe } from "../components/moreAboutMe";
-import { typeWriter, deleter, cursorEnter, wait, remove, cursorBlinkOn, cursorBlinkOff } from "./typewriter";
-import { autoScroll, stopAutoScroll } from "./autoScroll";
-import { loadAbout } from "../components/about";
+import {
+  typeWriter,
+  deleter,
+  cursorEnter,
+  wait,
+  remove,
+  cursorBlinkOn,
+  cursorBlinkOff,
+} from "./typewriter";
+import { loadAbout } from "../pages/about";
 
 //INITIALIZE THE WEB PAGE
 
@@ -61,8 +87,14 @@ export async function initialize() {
 
       //delete all the other stuff at console1 except h1_text and h2_text
       progress.remove();
-      await deleter(document.querySelector("h2:last-of-type") as HTMLElement, 50);
-      await deleter(document.querySelector("h2:last-of-type") as HTMLElement, 50);
+      await deleter(
+        document.querySelector("h2:last-of-type") as HTMLElement,
+        50
+      );
+      await deleter(
+        document.querySelector("h2:last-of-type") as HTMLElement,
+        50
+      );
 
       // cursor blinking for another 0.5s
       var cursorEle = cursorEnter("h2");
@@ -75,16 +107,10 @@ export async function initialize() {
       await wait(1000);
     }
 
-    wait(2000).then(()=> {
-      console.log("start scroll");
-      autoScroll();
-    })
-
     await typeWriter(p_text, "p", 50);
 
     skip_animation.classList.add("hidden"); // hide the skip-animation button
 
-    stopAutoScroll();
     // after the introduction finished typing, change color of text
     console_1.innerHTML = `<h2>${h2_text}</h2>
     <h1>${h1_text_revised}</h1>
@@ -100,16 +126,12 @@ export async function initialize() {
     logo.classList.remove("hidden");
 
     setIsInitializing(false);
-
-  } catch (e: any) { // this whole section is handling skip animation
+  } catch (e: any) {
+    // this whole section is handling skip animation
     if (e.message === "SKIP") {
       skip_animation.classList.add("hidden"); // hide the skip-animation button
 
       setSkip(false); // disallow skip from influencing the second console
-
-      wait(2500).then(() => {
-        stopAutoScroll
-      })
 
       // same as about_btn.onclick
       setCurrentPage(Page.about);
@@ -131,13 +153,14 @@ export async function initialize() {
       });
       about_btn.classList.add("on-page");
       menu_btn.classList.remove("inactive");
-      
+
       if (getW() > 768 && getO() === Orientation.landscape) {
         menu.classList.remove("inactive");
-        (document.querySelector("#button h2") as HTMLHeadingElement).innerText = "More about me";
+        (document.querySelector("#button h2") as HTMLHeadingElement).innerText =
+          "More about me";
         portfolio_btn.onclick = moreAboutMe;
       }
-      
+
       home.classList.remove("init");
       setIsInitializing(false);
     }

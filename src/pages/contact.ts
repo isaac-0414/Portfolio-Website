@@ -1,6 +1,20 @@
-import { console_1, console_2, menu, social_icon_box, portfolio_btn, btn_ls, contact_btn } from "../global/elements";
+import {
+  console_1,
+  console_2,
+  menu,
+  social_icon_box,
+  portfolio_btn,
+  btn_ls,
+  contact_btn,
+} from "../global/elements";
 import { getW, getO, Orientation } from "../global/window_size";
-import { getCurrentPage, setCurrentPage, Page, isMoreAboutMeOn, setMoreAboutMeOn } from "../global/globalStates";
+import {
+  getCurrentPage,
+  setCurrentPage,
+  Page,
+  isMoreAboutMeOn,
+  setMoreAboutMeOn,
+} from "../global/globalStates";
 import { quitProjects } from "./projects";
 import { clearConsole } from "../util/clear";
 import { sendMail } from "../util/email";
@@ -63,29 +77,30 @@ const contact_content = `
 </div>`;
 
 function loadContact() {
-   console_1.innerHTML = contact_content;
+  console_1.innerHTML = contact_content;
 }
 
 export async function goToContact() {
-   // if on mobile device, collapse the menu every time clicked a new button
-   if (getW() <= 768 || getO() === Orientation.portrait) {
-     menu.classList.add("inactive");
-   }
-   if (isMoreAboutMeOn() === true) setMoreAboutMeOn(false);
-   if (getCurrentPage() === Page.projects) await quitProjects();
-   setCurrentPage(Page.contact);
-   await clearConsole();
-   loadContact();
-   //toggle social media
-   social_icon_box.classList.remove('inactive');
-   btn_ls.forEach((btn) => {
-     btn.classList.remove("on-page");
-   });
-   //move the console to the middle and hide the portfolio button
-   contact_btn.classList.add("on-page");
-   console_1.classList.add("middle", "contact");
-   console_2.classList.add("middle", "hidden");
-   portfolio_btn.classList.add("hidden");
+  // if on mobile device, collapse the menu every time clicked a new button
+  if (getW() <= 768 || getO() === Orientation.portrait) {
+    menu.classList.add("inactive");
+  }
+  if (isMoreAboutMeOn() === true) setMoreAboutMeOn(false);
+  if (getCurrentPage() === Page.projects) await quitProjects();
+  setCurrentPage(Page.contact);
+  await clearConsole();
+  loadContact();
+  //toggle social media
+  social_icon_box.classList.remove("inactive");
+  btn_ls.forEach((btn) => {
+    btn.classList.remove("on-page");
+  });
+  //move the console to the middle and hide the portfolio button
+  contact_btn.classList.add("on-page");
+  console_1.classList.add("middle", "contact");
+  console_2.classList.add("middle", "hidden");
+  portfolio_btn.classList.add("hidden");
 
-   (document.querySelector("#send-mail-btn") as HTMLInputElement).onclick = sendMail;
-};
+  (document.querySelector("#send-mail-btn") as HTMLInputElement).onclick =
+    sendMail;
+}

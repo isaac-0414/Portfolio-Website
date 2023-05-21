@@ -1,7 +1,7 @@
 import { console_1 } from "../global/elements";
 import { getCurrentPage, Page, skipped } from "../global/globalStates";
 
-// TYPEWRITTER EFFECT HELP FUNCTIONS
+// TYPEWRITER EFFECT HELP FUNCTIONS
 export let cursor: HTMLSpanElement | null;
 
 export function typeWriter(text: string, type: string, speed: number) {
@@ -21,6 +21,7 @@ export function typeWriter(text: string, type: string, speed: number) {
       // add one letter to the text going to insert every time, and add cursor to the end
       to_insert.innerHTML =
         text.substring(0, text_position) + `<span class="cursor">&#124;</span>`;
+      to_insert.querySelector(".cursor")?.scrollIntoView();
       if (text_position++ != text.length) {
          setTimeout(typeWriterHelper, speed);
       } else {

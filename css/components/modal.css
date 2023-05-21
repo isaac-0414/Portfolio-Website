@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+
+.modal_page {
+   width: 100vw;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background: transparent;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 999;
+   backdrop-filter: blur(10px);
+}
+
+.modal {
+   height: 90%;
+   width: 700px;
+   background: #fff;
+   position: relative;
+}
+
+.modal * {
+   font-family: 'Raleway', monospace;
+}
+
+.modal .modal_upper {
+   width: 100%;
+   height: max-content;
+}
+
+.modal .modal_upper img {
+   width: 100%;
+   border-bottom: 4px solid black;
+}
+
+.modal .modal_lower {
+   width: 100%;
+   padding: 35px 60px 90px 25px;
+}
+
+.modal .modal_lower .header {
+   width: 100%;
+}
+
+.modal .modal_lower .header .title {
+   font-size: 22pt;
+   line-height: 30pt;
+   color: black;
+   font-weight: 700;
+   margin: 0;
+}
+
+.modal .modal_lower .header .tech_used {
+   color: black;
+   font-weight: 400;
+   color: #c0c0c0;
+   font-size: 13pt;
+   font-weight: 400;
+}
+
+.modal .modal_lower hr {
+   margin: 15px 0;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal .modal_lower .description {
+   font-size: 16px;
+   color: black;
+   font-weight: 400;
+   height: calc(25vh - 60px - 90px);
+   overflow: hidden;
+   overflow-y: scroll;
+}
+
+.modal .toolbar {
+   height: 90px;
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   padding: 0 35px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.modal .toolbar .view_site {
+   background-color: black;
+   color: white;
+   width: 130px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: none;
+   font-size: 16px;
+   font-weight: 500;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+.modal .toolbar .view_site i {
+   color: white;
+   margin-right: 5px;
+}
+
+.modal .toolbar .modal_close {
+   background: none;
+   border: none;
+   z-index: 1000;
+   cursor: pointer;
+}
+
+.modal .toolbar .modal_close i {
+   font-size: 35px;
+   color: black;
+}
+
+@media screen and (max-width: 319px) {
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+   .modal {
+      height: 70vh;
+      width: 90vw;
+   }
+   
+   .modal .modal_lower {
+      width: 100%;
+      padding: 20px 30px 20px 20px;
+   }
+   
+   .modal .modal_lower .header .title {
+      font-size: 20pt;
+      line-height: 28pt;
+   }
+   
+   .modal .modal_lower .header .tech_used {
+      font-size: 12pt;
+   }
+   
+   .modal .modal_lower hr {
+      margin: 10px 0;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+   }
+   
+   .modal .modal_lower .description {
+      font-size: 14px;
+      height: calc(40vh - 136px - 80px);
+   }
+   
+   .modal .toolbar {
+      height: 80px;
+      width: 100%;
+      padding: 0 20px;
+   }
+   
+   .modal .toolbar .view_site {
+      width: 120px;
+      height: 30px;
+      font-size: 14px;
+   }
+   
+   .modal .toolbar .view_site i {
+      margin-right: 4px;
+   }
+   
+   .modal .toolbar .modal_close i {
+      font-size: 35px;
+   }
+}
+
+@media screen and (min-width: 481px) and (max-width: 575px) {
+   .modal {
+      height: 70vh;
+      width: 90vw;
+   }
+   
+   .modal .modal_lower {
+      width: 100%;
+      padding: 20px 30px 20px 20px;
+   }
+   
+   .modal .modal_lower .header .title {
+      font-size: 20pt;
+      line-height: 28pt;
+   }
+   
+   .modal .modal_lower .header .tech_used {
+      font-size: 12pt;
+   }
+   
+   .modal .modal_lower hr {
+      margin: 10px 0;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+   }
+   
+   .modal .modal_lower .description {
+      font-size: 14px;
+      height: calc(40vh - 136px - 80px);
+   }
+   
+   .modal .toolbar {
+      height: 80px;
+      width: 100%;
+      padding: 0 20px;
+   }
+   
+   .modal .toolbar .view_site {
+      width: 120px;
+      height: 30px;
+      font-size: 14px;
+   }
+   
+   .modal .toolbar .view_site i {
+      margin-right: 4px;
+   }
+   
+   .modal .toolbar .modal_close i {
+      font-size: 35px;
+   }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+   .modal {
+      height: 70vh;
+      width: 90vw;
+   }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+   .modal {
+      height: 70vh;
+      width: 90vw;
+   }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+   .modal {
+      height: 70vh;
+      width: 90vw;
+   }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1920px) {}
+
+@media screen and (min-width: 1920px) {}
