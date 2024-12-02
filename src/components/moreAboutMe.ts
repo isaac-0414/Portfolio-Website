@@ -12,9 +12,10 @@ const more_about_me_content = `
       <img src="images/ski.jpg" alt="picture of myself">
    </div>
    <div class="text-container">
-      <p>I am a CS major student right now, and I am also working on Statistics Minor. </p>
-      <p>I am still actively learning new web technologies and learning game dev as well</p>
-      <p>I like <span>cycling</span> very much, and I play <span>piano</span> at free time. I am a big fan of <span>Asian food and Indian food</span></p>
+      <p>My legal name is <span>Zhiheng</span>, which pronounces like <span>Dreuheng</span></p>
+      <p>Besides web development, I also did security, game dev, mobile dev, 3D modeling before.</p>
+      <p>I am also an ML researcher focus on NLP and graph, but I am also experienced with visual and audio models.</p>
+      <p>I like playing <span>pool</span> very much, and I like <span>cycling</span> at free time.</p>
    </div>
 </div>`;
 

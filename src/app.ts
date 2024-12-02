@@ -1,5 +1,4 @@
 // Created by Isaac Zheng at August, 2022
-import { preloader } from "./components/preloader";
 import { initialize } from "./util/initialize";
 import {
   menu,
@@ -36,13 +35,15 @@ import { goToResume } from "./pages/resume";
 window.onload = main;
 
 async function main() {
-  preloader().then(() => {
+  // preloader().then(() => {
+  //   initialize();
+  // });
+  wait(1500).then(() => {
     initialize();
-  });
-  // initialize();
+  })
 
-  // wait 2s to prevent window resize at the first
-  await wait(2000);
+  // wait 0.5s to prevent window resize at the first
+  await wait(500);
   setW(window.innerWidth);
   setH(window.innerHeight);
   if (getW() >= getH()) {

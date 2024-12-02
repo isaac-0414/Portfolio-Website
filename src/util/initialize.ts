@@ -155,6 +155,7 @@ export async function initialize() {
       menu_btn.classList.remove("inactive");
 
       if (getW() > 768 && getO() === Orientation.landscape) {
+        console.log("activate")
         menu.classList.remove("inactive");
         (document.querySelector("#button h2") as HTMLHeadingElement).innerText =
           "More about me";

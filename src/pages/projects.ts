@@ -51,41 +51,46 @@ const projects_content = `
 
 const projects = [
    {
-      img_src: "images/geni.png",
-      title: "GENI.ZONE",
-      tech_used: "Next.ts, React.ts, MongoDB, AI Products, TailwindCSS",
-      description: `Geni streamlines personalized education by enabling educators and caregivers to effortlessly develop targeted curricula. 
-         Our platform not only elevates the learning experience but also contributes valuable, hard-to-obtain data for Alignment research.
-         I created the first version of our app with the founder, made most of the front-end part, created our database and some API endpoints, 
-         and helped integrate our app with google classroom`,
-      link: "",
-      tag: [ProjectsFilter.web, ProjectsFilter.AI]
-   },
-   {
       img_src: "images/scribear.png",
       title: "ScribeAR",
       tech_used: "React.ts, Javascript and Typescript, CSS",
-      description: `ScribeAR provides live Transcription for Augmented Reality Glasses.
-         I help made live Transcription web app and other web pages`,
+      description: `ScribeAR provides live Transcription for Augmented Reality (AR) Glasses.`,
       link: "https://scribear.illinois.edu/v/index.html",
       tag: [ProjectsFilter.web, ProjectsFilter.AI]
    },
    {
-      img_src: "images/online-store.png",
-      title: "Online Store",
-      tech_used: "React.ts, Javascript and Typescript, CSS",
-      description: `I used React.js to build the frontend of this e-commerce website, still working on backend`,
-      link: "http://store.isaaczheng.com",
-      tag: [ProjectsFilter.web]
+      img_src: "images/autohacker.png",
+      title: "AutoHacker",
+      tech_used: "Python, LLM, security",
+      description: `LLM agent that can autonomously hack websites.`,
+      link: " https://github.com/isaac-0414/auto-hacker",
+      tag: [ProjectsFilter.AI]
    },
    {
-      img_src: "images/portfolio.png",
-      title: "Portfolio website",
-      tech_used: "Typescript, CSS, HTML",
-      description: `Current portfolio website in use, first built with vanilla HTML, CSS, and Javascript, 
-         later switched to Typescript + Webpack. I also had a old portfolio website built with Wordpress`,
-      link: "http://isaaczheng.com",
-      tag: [ProjectsFilter.web]
+      img_src: "images/ukg.png",
+      title: "Universal KG",
+      tech_used: "Python, LLM, Graph",
+      description: `A framework for constructing and querying knowledge graphs from textual data`,
+      link: "https://github.com/isaac-0414/UniversalKG",
+      tag: [ProjectsFilter.AI]
+   },
+   {
+      img_src: "images/xianzong.png",
+      title: "Xian Zong",
+      tech_used: "Unreal Engine 5",
+      description: `A small FPS game made with Unreal Engine 5, where player need to dodge attack and use suitable weapon to kill enemies.`,
+      link: "https://github.com/hs38Song/XianZong",
+      tag: [ProjectsFilter.game]
+   },
+   {
+      img_src: "images/geni.png",
+      title: "Geni",
+      tech_used: "Next.ts, React.ts, MongoDB, Machine Learning, TailwindCSS",
+      description: `Geni (LLC) streamlines personalized education by enabling educators and caregivers to effortlessly develop targeted curricula. 
+         Our platform not only elevates the learning experience but also contributes valuable, hard-to-obtain data for Alignment research.
+         I was the Co-founder and CTO of it`,
+      link: "https://geni.zone",
+      tag: [ProjectsFilter.web, ProjectsFilter.AI]
    },
    {
       img_src: "images/object-detect.png",
@@ -119,6 +124,23 @@ const projects = [
        We would compare the results of running Betweeness Centrality and PageRank in determine quality and importance of papers.`,
       link: "https://github.com/isaac-0414/CS225-Final-Project/tree/main",
       tag: []
+   },
+   {
+      img_src: "images/portfolio.png",
+      title: "Portfolio website",
+      tech_used: "Typescript, CSS, HTML",
+      description: `Current portfolio website in use, first built with vanilla HTML, CSS, and Javascript, 
+         later switched to Typescript + Webpack. I also had a old portfolio website built with Wordpress`,
+      link: "http://isaaczheng.com",
+      tag: [ProjectsFilter.web]
+   },
+   {
+      img_src: "images/online-store.png",
+      title: "Online Store",
+      tech_used: "React.ts, Javascript and Typescript, CSS",
+      description: `I used React.js to build the frontend of this e-commerce website, still working on backend`,
+      link: "http://store.isaaczheng.com",
+      tag: [ProjectsFilter.web]
    },
    {
       img_src: "images/2048.png",

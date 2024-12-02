@@ -63,65 +63,11 @@ const skills_content_1 = `
    </div>
 
    <div class="skill-box">
-      <span class="title">Sass/SCSS</span>
-
-      <div class="skill-bar">
-         <span class="skill-per sass">
-         <span class="tooltip">70%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">Bootstrap / TailwindCSS</span>
-
-      <div class="skill-bar">
-         <span class="skill-per bootstrap">
-         <span class="tooltip">75%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">Wordpress</span>
-
-      <div class="skill-bar">
-         <span class="skill-per wordpress">
-         <span class="tooltip">75%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">jQuery</span>
-
-      <div class="skill-bar">
-         <span class="skill-per jquery">
-         <span class="tooltip">40%</span>
-         </span>
-      </div>
-   </div>
-
-</div>`;
-
-const skills_content_2 = `
-<div class="skill-container">
-   <div class="skill-box">
       <span class="title">NodeJS</span>
 
       <div class="skill-bar">
          <span class="skill-per nodejs">
             <span class="tooltip">80%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">NextJS</span>
-
-      <div class="skill-bar">
-         <span class="skill-per nextjs">
-            <span class="tooltip">75%</span>
          </span>
       </div>
    </div>
@@ -136,6 +82,61 @@ const skills_content_2 = `
       </div>
    </div>
 
+    <div class="skill-box">
+      <span class="title">NextJS</span>
+
+      <div class="skill-bar">
+         <span class="skill-per nextjs">
+            <span class="tooltip">80%</span>
+         </span>
+      </div>
+   </div>
+
+   <div class="skill-box">
+      <span class="title">Wordpress</span>
+
+      <div class="skill-bar">
+         <span class="skill-per wordpress">
+         <span class="tooltip">75%</span>
+         </span>
+      </div>
+   </div>
+
+</div>`;
+
+const skills_content_2 = `
+<div class="skill-container">
+
+   <div class="skill-box">
+      <span class="title">Python</span>
+
+      <div class="skill-bar">
+         <span class="skill-per python">
+            <span class="tooltip">90%</span>
+         </span>
+      </div>
+   </div>
+
+   <div class="skill-box">
+      <span class="title">Java</span>
+
+      <div class="skill-bar">
+         <span class="skill-per java">
+            <span class="tooltip">60%</span>
+         </span>
+      </div>
+   </div>
+
+   <div class="skill-box">
+      <span class="title">C++/C</span>
+
+      <div class="skill-bar">
+         <span class="skill-per cpp">
+            <span class="tooltip">80%</span>
+         </span>
+      </div>
+   </div>
+   
    <div class="skill-box">
       <span class="title">MongoDB</span>
 
@@ -151,37 +152,37 @@ const skills_content_2 = `
 
       <div class="skill-bar">
          <span class="skill-per postgresql">
-            <span class="tooltip">65%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">Prisma ORM / Mongoose ODM</span>
-
-      <div class="skill-bar">
-         <span class="skill-per prisma">
-            <span class="tooltip">75%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">Python w/ FastAPI</span>
-
-      <div class="skill-bar">
-         <span class="skill-per python">
             <span class="tooltip">70%</span>
          </span>
       </div>
    </div>
 
    <div class="skill-box">
-      <span class="title">Java/C++</span>
+      <span class="title">Swift</span>
 
       <div class="skill-bar">
-         <span class="skill-per java">
-            <span class="tooltip">60%</span>
+         <span class="skill-per swift">
+         <span class="tooltip">50%</span>
+         </span>
+      </div>
+   </div>
+
+   <div class="skill-box">
+      <span class="title">Unreal Engine 5</span>
+
+      <div class="skill-bar">
+         <span class="skill-per ue">
+         <span class="tooltip">70%</span>
+         </span>
+      </div>
+   </div>
+
+   <div class="skill-box">
+      <span class="title">Blender</span>
+
+      <div class="skill-bar">
+         <span class="skill-per blender">
+         <span class="tooltip">65%</span>
          </span>
       </div>
    </div>

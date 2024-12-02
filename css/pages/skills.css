@@ -59,32 +59,33 @@
   width: 80%;
 }
 
-.skill-bar .skill-per.sass {
+.skill-bar .skill-per.nodejs {
+  width: 80%;
+}
+
+.skill-bar .skill-per.expressjs {
   width: 70%;
 }
 
-.skill-bar .skill-per.bootstrap {
-  width: 75%;
+.skill-bar .skill-per.nextjs {
+  width: 80%;
 }
 
 .skill-bar .skill-per.wordpress {
   width: 75%;
 }
 
-.skill-bar .skill-per.jquery {
-  width: 40%;
+
+.skill-bar .skill-per.python {
+  width: 90%;
 }
 
-.skill-bar .skill-per.nodejs {
+.skill-bar .skill-per.java {
+  width: 60%;
+}
+
+.skill-bar .skill-per.cpp {
   width: 80%;
-}
-
-.skill-bar .skill-per.nextjs {
-  width: 75%;
-}
-
-.skill-bar .skill-per.expressjs {
-  width: 70%;
 }
 
 .skill-bar .skill-per.mongodb {
@@ -92,19 +93,19 @@
 }
 
 .skill-bar .skill-per.postgresql {
-  width: 65%;
-}
-
-.skill-bar .skill-per.prisma {
-  width: 75%;
-}
-
-.skill-bar .skill-per.python {
   width: 70%;
 }
 
-.skill-bar .skill-per.java {
-  width: 60%;
+.skill-bar .skill-per.swift {
+  width: 50%;
+}
+
+.skill-bar .skill-per.ue {
+  width: 70%;
+}
+
+.skill-bar .skill-per.blender {
+  width: 65%;
 }
 
 
