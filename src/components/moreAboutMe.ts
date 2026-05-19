@@ -13,7 +13,6 @@ const more_about_me_content = `
    </div>
    <div class="text-container">
       <p>My legal name is <span>Zhiheng</span>, which pronounces like <span>Dreuheng</span></p>
-      <p>Besides web development, I also did security, game dev, mobile dev, 3D modeling before.</p>
       <p>I am also an ML researcher focus on NLP and graph, but I am also experienced with visual and audio models.</p>
       <p>I like playing <span>pool</span> very much, and I like <span>cycling</span> at free time.</p>
    </div>

@@ -21,6 +21,7 @@ import {
 import { quitProjects } from "./projects";
 import { clearConsole } from "../util/clear";
 import { moreAboutMe } from "../components/moreAboutMe";
+import { startPortfolio } from "../util/startPortfolio";
 
 export async function loadAbout() {
   console_1.innerHTML = `<h2>${h2_text}</h2>
@@ -51,8 +52,13 @@ export async function goToAbout() {
   loadAbout();
   // show the portfolio button and modify the innerText
   portfolio_btn.classList.remove("hidden");
-  btn_text.innerText = "More about me";
-  portfolio_btn.onclick = moreAboutMe;
+  if (getW() > 768 && getO() === Orientation.landscape) {
+    btn_text.innerText = "More about me";
+    portfolio_btn.onclick = moreAboutMe;
+  } else {
+    btn_text.innerText = "Go To Portfolio";
+    portfolio_btn.onclick = startPortfolio;
+  }
   //remove the on-page class of all the other nav buttons except the current one
   btn_ls.forEach((btn) => {
     btn.classList.remove("on-page");
