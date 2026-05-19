@@ -215,15 +215,3 @@ rm -rf dist/
 # Rebuild
 npm run build
 ```
-
-## 📄 License
-
-ISC License
-
-## 👤 Author
-
-Isaac Zheng
-
----
-
-For questions or suggestions, feel free to open an Issue or Pull Request!
