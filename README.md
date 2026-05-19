@@ -1,4 +1,4 @@
-# Isaac's Portfolio Website
+# My Portfolio Website
 
 A modern personal portfolio website built with TypeScript, Webpack, and vanilla HTML/CSS. Showcasing skills, projects, education, and contact information.
 
