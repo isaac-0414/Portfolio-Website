@@ -2,7 +2,7 @@
 export const home: HTMLDivElement = document.querySelector("#home") as HTMLDivElement;
 export const header: HTMLDivElement = document.querySelector("header") as HTMLDivElement;
 export const logo: HTMLDivElement = document.querySelector("header .logo") as HTMLDivElement;
-export const menu_btn: HTMLElement = document.querySelector("#menu-btn") as HTMLElement;
+export const menu_btn: HTMLButtonElement = document.querySelector("#menu-btn") as HTMLButtonElement;
 export const menu: HTMLDivElement = document.querySelector("header nav menu") as HTMLDivElement;
 
 //two consoles
@@ -10,11 +10,11 @@ export const console_1: HTMLDivElement = document.querySelector("#console_1") as
 export const console_2: HTMLDivElement = document.querySelector("#console_2") as HTMLDivElement;
 
 //main menu buttons
-export const about_btn: HTMLSpanElement = document.querySelector("#about") as HTMLSpanElement;
-export const skills_btn: HTMLSpanElement = document.querySelector("#skills") as HTMLSpanElement;
-export const projects_btn: HTMLSpanElement = document.querySelector("#projects") as HTMLSpanElement;
-export const resume_btn: HTMLSpanElement = document.querySelector("#resume") as HTMLSpanElement;
-export const contact_btn: HTMLSpanElement = document.querySelector("#contact") as HTMLSpanElement;
+export const about_btn: HTMLButtonElement = document.querySelector("#about") as HTMLButtonElement;
+export const skills_btn: HTMLButtonElement = document.querySelector("#skills") as HTMLButtonElement;
+export const projects_btn: HTMLButtonElement = document.querySelector("#projects") as HTMLButtonElement;
+export const resume_btn: HTMLButtonElement = document.querySelector("#resume") as HTMLButtonElement;
+export const contact_btn: HTMLButtonElement = document.querySelector("#contact") as HTMLButtonElement;
 
 // big button at the bottom
 export const portfolio_btn: HTMLDivElement = document.querySelector("#button") as HTMLDivElement;

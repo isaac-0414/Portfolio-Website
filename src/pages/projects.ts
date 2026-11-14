@@ -28,7 +28,8 @@ enum ProjectsFilter {
    all,
    web,
    game,
-   AI
+   AI,
+   systems
 }
 
 const projects_content = `
@@ -42,6 +43,7 @@ const projects_content = `
       <div class="filter web">Web</div>
       <div class="filter game">Game</div>
       <div class="filter AI">AI</div>
+      <div class="filter systems">Systems</div>
    </div>
    <div class="box"></div>
    <div class="btn">
@@ -50,6 +52,41 @@ const projects_content = `
 </div>`;
 
 const projects = [
+   {
+      img_src: "images/ot-kv.svg",
+      title: "Optimal Transport for KV-Cache Compression (OT-KV)",
+      tech_used: "PyTorch, LLM, Optimal Transport, CUDA",
+      description: `A Hugging Face-compatible method that compresses an LLM's KV-cache by redistributing evicted tokens' value 
+         representations across retained anchors via entropy-regularized optimal transport, implemented with a numerically 
+         stable log-domain Sinkhorn-Knopp solver in half precision. Achieved 100% retrieval accuracy at 50% KV-cache 
+         reduction on long-context Needle-in-a-Haystack (Llama-3-8B), and the highest LongBench F1 (22.1) among evaluated 
+         methods, outperforming StreamingLLM and H2O.`,
+      link: "https://github.com/T0nyN1/OT-KV",
+      tag: [ProjectsFilter.AI, ProjectsFilter.systems]
+   },
+   {
+      img_src: "images/riscv.svg",
+      title: "7-Stage Pipelined RISC-V Processor",
+      tech_used: "SystemVerilog, Computer Architecture",
+      description: `A 32-bit, 7-stage pipelined processor microarchitecture built from scratch in SystemVerilog with full 
+         support for the RV32I base ISA and the RV32M multiply/divide extension. Designed a BTB-based dynamic branch 
+         predictor that resolves jump targets during fetch to cut pipeline stalls and misprediction penalties, plus a 
+         high-performance memory subsystem — L1 instruction/data caches and an FSM-driven cache controller handling misses, 
+         write-back, and memory interfacing — to reduce average access latency.`,
+      link: null,
+      tag: [ProjectsFilter.systems]
+   },
+   {
+      img_src: "images/uvm-compiler.svg",
+      title: "UVM-to-RTL Synthesis Compiler",
+      tech_used: "SystemVerilog, UVM, Compilers, RTL",
+      description: `A source-to-source compiler that maps high-level object-oriented SystemVerilog (UVM) into a synthesizable 
+         RTL subset, moving verification logic into hardware for acceleration. Built the parser and assembler that translate 
+         dynamic OOP UVM structures into static hardware modules and finite state machines, and contributed to integrating 
+         hardware stimulus generators and coverage modules that exploit hardware parallelism to speed up verification.`,
+      link: null,
+      tag: [ProjectsFilter.systems]
+   },
    {
       img_src: "images/scribear.png",
       title: "ScribeAR",
@@ -130,7 +167,7 @@ const projects = [
       title: "Portfolio website",
       tech_used: "Typescript, CSS, HTML",
       description: `Current portfolio website in use, first built with vanilla HTML, CSS, and Javascript, 
-         later switched to Typescript + Webpack. I also had a old portfolio website built with Wordpress`,
+         later rebuilt with TypeScript and Vite. I also had an old portfolio website built with Wordpress`,
       link: "http://isaaczheng.com",
       tag: [ProjectsFilter.web]
    },
@@ -273,6 +310,12 @@ export async function goToProjects() {
       populateProjects(ProjectsFilter.AI);
       changeFilterActive(ProjectsFilter.AI);
    });
+
+   projects_menu?.querySelector('.filter.systems')?.addEventListener('click', () => {
+      removeProjects();
+      populateProjects(ProjectsFilter.systems);
+      changeFilterActive(ProjectsFilter.systems);
+   });
 }
 
 function changeFilterActive(filter?: ProjectsFilter | undefined) {
@@ -281,6 +324,7 @@ function changeFilterActive(filter?: ProjectsFilter | undefined) {
    projects_menu?.querySelector('.filter.web')?.classList.remove('active');
    projects_menu?.querySelector('.filter.game')?.classList.remove('active');
    projects_menu?.querySelector('.filter.AI')?.classList.remove('active');
+   projects_menu?.querySelector('.filter.systems')?.classList.remove('active');
    switch (filter) {
       case ProjectsFilter.all:
          projects_menu?.querySelector('.filter.all')?.classList.add('active');
@@ -293,6 +337,9 @@ function changeFilterActive(filter?: ProjectsFilter | undefined) {
          break;
       case ProjectsFilter.AI:
          projects_menu?.querySelector('.filter.AI')?.classList.add('active');
+         break;
+      case ProjectsFilter.systems:
+         projects_menu?.querySelector('.filter.systems')?.classList.add('active');
          break;
       default:
          projects_menu?.querySelector('.filter.all')?.classList.add('active');

@@ -10,23 +10,27 @@ export default function showModalWrapper({img_src, title, tech_used, description
    return () => {
       const modal_page = document.createElement("div");
       modal_page.classList.add("modal_page");
+      // only render the link button for projects that actually have a public link
+      const link_html = link && link !== "#"
+         ? `<a class='view_site' href="${link}" target="_blank" rel="noopener noreferrer">
+                     <i class='bx bx-link-external'></i>
+                     View Project
+                  </a>`
+         : "";
       modal_page.innerHTML = `
          <div class="modal">
             <div class="modal_upper">
-               <img src=${img_src} alt="project">
+               <img src="${img_src}" alt="project">
             </div>
             <div class="modal_lower">
                <div class="header">
                   <h1 class="title">${title}</h1>
-                  <h3 class="tech_used">${tech_used}</h3>
+                  <h3 class="tech_used">${tech_used ?? ""}</h3>
                </div>
                <hr />
                <div class="description">${description}</div>
                <div class="toolbar">
-                  <a class='view_site' href=${link} target="_blank">
-                     <i class='bx bx-link-external'></i>
-                     View Site
-                  </a>
+                  ${link_html}
                   <button class="modal_close">
                      <i class='bx bx-x'></i>
                   </button>

@@ -13,19 +13,19 @@ header.projects .logo svg path:nth-of-type(2) {
   fill: white;
 }
 
-header.projects nav menu .link_wrapper span,
+header.projects nav menu .link_wrapper button,
 header.projects nav menu .link_wrapper p {
   color: #fff;
 }
 
-header.projects nav menu .link_wrapper span:hover,
-header.projects nav menu .link_wrapper span:hover ~ .num-top {
+header.projects nav menu .link_wrapper button:hover,
+header.projects nav menu .link_wrapper button:hover ~ .num-top {
   color: grey;
   cursor: pointer;
 }
 
-header.projects nav menu .link_wrapper span.on-page,
-header.projects nav menu .link_wrapper span.on-page ~ .num-top {
+header.projects nav menu .link_wrapper button.on-page,
+header.projects nav menu .link_wrapper button.on-page ~ .num-top {
   color: grey;
 }
 
@@ -61,8 +61,12 @@ header.projects nav #menu-btn {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 20px 0 20px;
-  padding-top: 15vh;
+  width: 100vw;
+  min-height: 100vh;
+  left: 0;
+  margin: 0;
+  padding: 15vh 20px 0;
+  box-sizing: border-box;
   position: absolute;
 }
 
@@ -235,7 +239,7 @@ header.projects nav #menu-btn {
   background-color: black;
   position: absolute;
   top: 0;
-  left: -20px;
+  left: 0;
   transform: translateX(100%);
   z-index: 10;
 }

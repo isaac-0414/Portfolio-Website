@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="OT-KV placeholder">
+  <rect width="800" height="500" fill="#101010"/>
+  <rect x="12" y="12" width="776" height="476" fill="none" stroke="#32CD32" stroke-width="2" opacity="0.5"/>
+  <text x="400" y="230" fill="#32CD32" font-family="'Courier New', monospace" font-size="52" font-weight="700" text-anchor="middle">OT-KV</text>
+  <text x="400" y="285" fill="#8ef58e" font-family="'Courier New', monospace" font-size="24" text-anchor="middle">Optimal Transport KV-Cache Compression</text>
+  <text x="400" y="330" fill="#4d804d" font-family="'Courier New', monospace" font-size="18" text-anchor="middle">// screenshot coming soon</text>
+</svg>

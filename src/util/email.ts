@@ -13,9 +13,9 @@ export function sendMail() {
       alert("please fill out all the fields")
       return
    }
-   emailjs.init(process.env.EMAILJS_PUBLIC_KEY as string);
+   emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
    
-   emailjs.send(process.env.EMAILJS_YOUR_SERVICE_ID as string, process.env.EMAILJS_TEMPLATE_ID as string, params)
+   emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, params)
       .then(function() {
          alert("Email Sent")
       }, function(error) {

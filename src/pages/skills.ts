@@ -19,174 +19,103 @@ import {
 import { goToProjects, quitProjects } from "./projects";
 import { clearConsole } from "../util/clear";
 
+const programming_category = `
+   <div class="skills-cat">
+      <h3 class="cat-title">// Programming</h3>
+      <ul class="skill-tags">
+         <li>C / C++</li>
+         <li>Python</li>
+         <li>CUDA</li>
+         <li>JavaScript</li>
+         <li>TypeScript</li>
+         <li>Java</li>
+         <li>SQL</li>
+         <li>OCaml</li>
+         <li>Shell Scripting</li>
+      </ul>
+   </div>`;
+
+const systems_category = `
+   <div class="skills-cat">
+      <h3 class="cat-title">// Systems & Architecture</h3>
+      <ul class="skill-tags">
+         <li>Distributed Systems</li>
+         <li>Parallel Computing</li>
+         <li>ML Systems</li>
+         <li>Computer Architecture</li>
+         <li>Compilers</li>
+      </ul>
+   </div>`;
+
+const hardware_category = `
+   <div class="skills-cat">
+      <h3 class="cat-title">// Hardware & EDA</h3>
+      <ul class="skill-tags">
+         <li>SystemVerilog (UVM)</li>
+         <li>Verilator</li>
+         <li>Vivado</li>
+      </ul>
+   </div>`;
+
+const ml_category = `
+   <div class="skills-cat">
+      <h3 class="cat-title">// Machine Learning & AI</h3>
+      <ul class="skill-tags">
+         <li>PyTorch</li>
+         <li>TensorFlow</li>
+         <li>scikit-learn</li>
+         <li>Large Language Models</li>
+         <li>Diffusion Models</li>
+         <li>Multi-Modal Models</li>
+      </ul>
+   </div>`;
+
+const cloud_category = `
+   <div class="skills-cat">
+      <h3 class="cat-title">// Cloud & DevOps</h3>
+      <ul class="skill-tags">
+         <li>AWS (EC2, S3, Lambda)</li>
+         <li>Azure</li>
+         <li>GCP</li>
+         <li>Kubernetes</li>
+         <li>Docker</li>
+         <li>Git</li>
+      </ul>
+   </div>`;
+
+const frameworks_category = `
+   <div class="skills-cat">
+      <h3 class="cat-title">// Web Development</h3>
+      <ul class="skill-tags">
+         <li>HTML</li>
+         <li>CSS</li>
+         <li>Tailwind CSS</li>
+         <li>Node.js</li>
+         <li>React.js</li>
+         <li>Next.js</li>
+         <li>Vue.js</li>
+         <li>Express.js</li>
+         <li>FastAPI / Flask</li>
+         <li>MongoDB</li>
+         <li>MySQL</li>
+         <li>jQuery</li>
+         <li>RESTful APIs</li>
+         <li>WebAssembly</li>
+      </ul>
+   </div>`;
+
 const skills_content_1 = `
 <div class="skill-container">
-
-   <div class="skill-box">
-      <span class="title">HTML</span>
-
-      <div class="skill-bar">
-         <span class="skill-per html">
-         <span class="tooltip">90%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">CSS</span>
-
-      <div class="skill-bar">
-         <span class="skill-per css">
-         <span class="tooltip">90%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">JavaScript / Typescript</span>
-
-      <div class="skill-bar">
-         <span class="skill-per javascript">
-         <span class="tooltip">85%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">ReactJs</span>
-
-      <div class="skill-bar">
-         <span class="skill-per react">
-         <span class="tooltip">80%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">NodeJS</span>
-
-      <div class="skill-bar">
-         <span class="skill-per nodejs">
-            <span class="tooltip">80%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">ExpressJS</span>
-
-      <div class="skill-bar">
-         <span class="skill-per expressjs">
-            <span class="tooltip">70%</span>
-         </span>
-      </div>
-   </div>
-
-    <div class="skill-box">
-      <span class="title">NextJS</span>
-
-      <div class="skill-bar">
-         <span class="skill-per nextjs">
-            <span class="tooltip">80%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">Wordpress</span>
-
-      <div class="skill-bar">
-         <span class="skill-per wordpress">
-         <span class="tooltip">75%</span>
-         </span>
-      </div>
-   </div>
-
+   ${programming_category}
+   ${ml_category}
+   ${cloud_category}
 </div>`;
 
 const skills_content_2 = `
 <div class="skill-container">
-
-   <div class="skill-box">
-      <span class="title">Python</span>
-
-      <div class="skill-bar">
-         <span class="skill-per python">
-            <span class="tooltip">90%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">Java</span>
-
-      <div class="skill-bar">
-         <span class="skill-per java">
-            <span class="tooltip">60%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">C++/C</span>
-
-      <div class="skill-bar">
-         <span class="skill-per cpp">
-            <span class="tooltip">80%</span>
-         </span>
-      </div>
-   </div>
-   
-   <div class="skill-box">
-      <span class="title">MongoDB</span>
-
-      <div class="skill-bar">
-         <span class="skill-per mongodb">
-            <span class="tooltip">70%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">PostgreSQL</span>
-
-      <div class="skill-bar">
-         <span class="skill-per postgresql">
-            <span class="tooltip">70%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">Swift</span>
-
-      <div class="skill-bar">
-         <span class="skill-per swift">
-         <span class="tooltip">50%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">Unreal Engine 5</span>
-
-      <div class="skill-bar">
-         <span class="skill-per ue">
-         <span class="tooltip">70%</span>
-         </span>
-      </div>
-   </div>
-
-   <div class="skill-box">
-      <span class="title">Blender</span>
-
-      <div class="skill-bar">
-         <span class="skill-per blender">
-         <span class="tooltip">65%</span>
-         </span>
-      </div>
-   </div>
-    
+   ${systems_category}
+   ${hardware_category}
+   ${frameworks_category}
 </div>`;
 
 export function loadSkills() {

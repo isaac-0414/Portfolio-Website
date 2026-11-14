@@ -12,9 +12,9 @@ const more_about_me_content = `
       <img src="images/ski.jpg" alt="picture of myself">
    </div>
    <div class="text-container">
-      <p>My legal name is <span>Zhiheng</span>, which pronounces like <span>Dreuheng</span></p>
-      <p>I am also an ML researcher focus on NLP and graph, but I am also experienced with visual and audio models.</p>
-      <p>I like playing <span>pool</span> very much, and I like <span>cycling</span> at free time.</p>
+      <p>My legal name is <span>Zhiheng</span>, which pronounces like <span>Jrr-heng</span></p>
+      <p>I work on <span>AI systems & infrastructure</span> and <span>LLM agents</span>, with a background in NLP, graphs, and multimodal models.</p>
+      <p>I enjoy playing <span>billiards</span> and <span>cycling</span> very much, and I like video games, poker, and mahjong</p>
    </div>
 </div>`;
 

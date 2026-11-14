@@ -11,7 +11,7 @@ Visit online: [http://isaaczheng.com](http://isaaczheng.com)
 - **Modular Architecture**: Clean code organization that's easy to maintain and extend
 - **Smooth Animations**: Typewriter effect, auto-scroll, and transition animations
 - **Email Functionality**: Integrated EmailJS for direct contact form submissions
-- **Webpack Build**: Configured for both development and production environments
+- **Vite Build**: Fast dev server (HMR) and optimized, content-hashed production builds
 
 ## 📋 Page Structure
 
@@ -25,7 +25,7 @@ Visit online: [http://isaaczheng.com](http://isaaczheng.com)
 ## 🚀 Getting Started
 
 ### Requirements
-- Node.js (version 14 or higher)
+- Node.js (version 18 or higher)
 - npm or yarn
 
 ### Installation
@@ -43,20 +43,20 @@ Visit online: [http://isaaczheng.com](http://isaaczheng.com)
 
 3. **Configure environment variables** (for email functionality)
    ```bash
-   # Create .env file
-   echo "EMAILJS_SERVICE_ID=your_service_id" > .env
-   echo "EMAILJS_TEMPLATE_ID=your_template_id" >> .env
-   echo "EMAILJS_PUBLIC_KEY=your_public_key" >> .env
+   # Create .env file (Vite only exposes vars prefixed with VITE_)
+   echo "VITE_EMAILJS_PUBLIC_KEY=your_public_key" > .env
+   echo "VITE_EMAILJS_SERVICE_ID=your_service_id" >> .env
+   echo "VITE_EMAILJS_TEMPLATE_ID=your_template_id" >> .env
    ```
 
 ### Development
 
-Start the development server with hot reload:
+Start the Vite dev server with hot reload:
 ```bash
-npm start
+npm run dev
 ```
 
-Visit `http://localhost:8080` to view the website
+Visit `http://localhost:5173` to view the website
 
 ### Production Build
 
@@ -65,7 +65,19 @@ Build an optimized production version:
 npm run build
 ```
 
-Build output will be in the `dist/` directory
+Build output will be in the `dist/` directory (JS/CSS are content-hashed into `dist/assets/`). Preview the production build locally with `npm run preview`.
+
+### Deploying to AWS S3
+
+Upload hashed assets with long-lived caching and `index.html` with no caching so new deploys are picked up immediately:
+```bash
+aws s3 sync dist/ s3://<your-bucket> --exclude index.html \
+  --cache-control "public, max-age=31536000, immutable"
+aws s3 cp dist/index.html s3://<your-bucket>/index.html \
+  --cache-control "no-cache"
+# If fronted by CloudFront, invalidate the HTML:
+# aws cloudfront create-invalidation --distribution-id <id> --paths "/index.html"
+```
 
 ## 📁 Project Structure
 
@@ -100,13 +112,19 @@ src/
     └── typewriter.ts      # Typewriter effect
 
 css/
-├── main.css               # Main stylesheet
+├── main.css               # Main stylesheet (imported by src/app.ts)
 ├── normalize.css          # Normalize styles
 ├── components/            # Component styles
 ├── layout/                # Layout styles
 └── pages/                 # Page styles
 
-index.html                 # HTML entry point
+public/                    # Copied to dist/ as-is (not hashed)
+├── images/                # Project/screenshot images
+├── favicon.ico
+└── resume.pdf
+
+index.html                 # HTML entry point (Vite root)
+vite.config.ts             # Vite configuration
 ```
 
 ## 🛠 Tech Stack
@@ -116,30 +134,24 @@ index.html                 # HTML entry point
 | TypeScript | Programming language |
 | HTML5 | Markup language |
 | CSS3 | Styling |
-| Webpack | Module bundler |
-| Webpack Dev Server | Development server |
-| ts-loader | TypeScript loader |
+| Vite | Build tool & dev server |
 | EmailJS | Email service |
-| Boxicons | Icon library |
+| Boxicons | Icon library (bundled locally) |
 
 ## 📦 Dependencies
 
 ### Dev Dependencies
-- `webpack` ^5.75.0 - Module bundler
-- `typescript` ^4.9.5 - TypeScript compiler
-- `webpack-dev-server` ^4.11.1 - Development server
-- `ts-loader` ^9.4.2 - TypeScript loader
-- `clean-webpack-plugin` ^4.0.0 - Clean output directory
+- `vite` ^6.0.7 - Build tool & dev server
+- `typescript` ^5.7.2 - TypeScript compiler
 
 ### Production Dependencies
 - `@emailjs/browser` ^3.11.0 - Email service
-- `dotenv` ^16.0.3 - Environment variables
+- `boxicons` ^2.1.4 - Icon library (bundled locally, no CDN)
 
 ## ⚙ Configuration Files
 
 - **tsconfig.json** - TypeScript compilation configuration
-- **webpack.config.js** - Development environment Webpack config
-- **webpack.config.prod.js** - Production environment Webpack config
+- **vite.config.ts** - Vite build & dev server config
 
 ## 🔑 Key Features
 
@@ -161,9 +173,10 @@ Uses EmailJS service to send contact form messages.
 ## 🚦 Available Scripts
 
 ```bash
-npm start        # Start dev server (http://localhost:8080)
-npm run build    # Build production version
-npm test         # Run tests (not configured)
+npm run dev        # Start Vite dev server (http://localhost:5173)
+npm run build      # Build production version into dist/
+npm run preview    # Preview the production build locally
+npm run typecheck  # Type-check with tsc --noEmit
 ```
 
 ## 🔐 Environment Variables
@@ -171,9 +184,9 @@ npm test         # Run tests (not configured)
 To use the email functionality, configure the following environment variables in a `.env` file:
 
 ```
-EMAILJS_SERVICE_ID=your_emailjs_service_id
-EMAILJS_TEMPLATE_ID=your_emailjs_template_id
-EMAILJS_PUBLIC_KEY=your_emailjs_public_key
+VITE_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
+VITE_EMAILJS_SERVICE_ID=your_emailjs_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
 ```
 
 Sign up for a free account at [EmailJS](https://www.emailjs.com/) to get these IDs.

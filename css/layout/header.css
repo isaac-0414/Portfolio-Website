@@ -105,25 +105,36 @@ header nav menu .link_wrapper .num-top {
   top: -12px;
 }
 
-header nav menu .link_wrapper span {
+header nav menu .link_wrapper button {
+  /* reset native button styling so it looks like the old span */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
   font-size: 25px;
   font-weight: 700;
   line-height: 50px;
   text-align: center;
 }
 
-header nav menu .link_wrapper span:hover,
-header nav menu .link_wrapper span:hover ~ .num-top {
+header nav menu .link_wrapper button:hover,
+header nav menu .link_wrapper button:hover ~ .num-top {
   color: white;
   cursor: pointer;
 }
 
-header nav menu .link_wrapper span.on-page,
-header nav menu .link_wrapper span.on-page ~ .num-top {
+header nav menu .link_wrapper button.on-page,
+header nav menu .link_wrapper button.on-page ~ .num-top {
   color: white;
 }
 
 header nav #menu-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
   font-size: 40px;
   text-align: center;
   line-height: 50px;
@@ -372,7 +383,7 @@ header nav #menu-btn.inactive {
     top: -12px;
   }
   
-  header nav menu .link_wrapper span {
+  header nav menu .link_wrapper button {
     font-size: 20px;
     font-weight: 700;
     line-height: 50px;
@@ -445,7 +456,7 @@ header nav #menu-btn.inactive {
     font-size: 15px;
   }
   
-  header nav menu .link_wrapper span {
+  header nav menu .link_wrapper button {
     font-size: 30px;
   }
 
@@ -525,7 +536,7 @@ header nav #menu-btn.inactive {
     top: -12px;
   }
   
-  header nav menu .link_wrapper span {
+  header nav menu .link_wrapper button {
     font-size: 23px;
     font-weight: 700;
     line-height: 50px;
@@ -597,7 +608,7 @@ header nav #menu-btn.inactive {
     top: 0;
   }
   
-  header nav menu .link_wrapper span {
+  header nav menu .link_wrapper button {
     font-size: 1.8vw;
     font-weight: 700;
     line-height: 50px;

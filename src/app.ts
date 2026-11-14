@@ -1,4 +1,7 @@
 // Created by Isaac Zheng at August, 2022
+// Styles are imported here so Vite bundles, minifies and content-hashes them.
+import "boxicons/css/boxicons.min.css";
+import "../css/main.css";
 import { initialize } from "./util/initialize";
 import {
   menu,

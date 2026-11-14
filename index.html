@@ -6,13 +6,25 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1" />
    <title>Isaac Zheng | Web Developer</title>
-   <link rel="icon" href="favicon.ico" />
+   <link rel="icon" href="/favicon.ico" />
 
-   <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-   />
-   <link rel="stylesheet" href="css/main.css" />
+   <!-- SEO -->
+   <meta name="description" content="Isaac Zheng (Zhiheng Zheng) — web developer and student. Portfolio showcasing skills, projects, resume and contact." />
+   <meta name="author" content="Isaac Zheng" />
+   <link rel="canonical" href="https://isaaczheng.com/" />
+
+   <!-- Open Graph -->
+   <meta property="og:type" content="website" />
+   <meta property="og:url" content="https://isaaczheng.com/" />
+   <meta property="og:title" content="Isaac Zheng | Web Developer" />
+   <meta property="og:description" content="Portfolio of Isaac Zheng — web developer and student. Skills, projects, resume and contact." />
+   <meta property="og:image" content="https://isaaczheng.com/images/portfolio.png" />
+
+   <!-- Twitter -->
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:title" content="Isaac Zheng | Web Developer" />
+   <meta name="twitter:description" content="Portfolio of Isaac Zheng — web developer and student. Skills, projects, resume and contact." />
+   <meta name="twitter:image" content="https://isaaczheng.com/images/portfolio.png" />
 </head>
 <body>
    <!-- preloader -->
@@ -121,56 +133,56 @@
             />
          </svg>
       </div>
-      <nav>
+      <nav aria-label="Main navigation">
          <menu class="inactive">
             <div class="link_wrapper">
-            <span id="about">// About</span>
+            <button type="button" id="about">// About</button>
             <p class="num-top">01</p>
             </div>
             <div class="link_wrapper">
-            <span id="skills">// Skills</span>
+            <button type="button" id="skills">// Skills</button>
             <p class="num-top">02</p>
             </div>
             <div class="link_wrapper">
-            <span id="projects">// Projects</span>
+            <button type="button" id="projects">// Projects</button>
             <p class="num-top">03</p>
             </div>
             <div class="link_wrapper">
-            <span id="resume">// Resume</span>
+            <button type="button" id="resume">// Resume</button>
             <p class="num-top">04</p>
             </div>
             <div class="link_wrapper">
-            <span id="contact">// Contact</span>
+            <button type="button" id="contact">// Contact</button>
             <p class="num-top">05</p>
             </div>
          </menu>
-         <i class="bx bx-menu inactive" id="menu-btn"></i>
+         <button type="button" class="bx bx-menu inactive" id="menu-btn" aria-label="Toggle navigation menu"></button>
       </nav>
       </header>
       <!-- social icons that only appears at contact page -->
       <div class="social-icon-box inactive">
       <div class="media-container">
-         <a href="https://twitter.com/IsaacZheng6" target="_blank" rel="noopener noreferrer">
+         <a href="https://twitter.com/IsaacZheng6" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
             <i class="bx bxl-twitter"></i>
          </a>
       </div>
       <div class="media-container">
-         <a href="https://www.facebook.com/profile.php?id=100081058492090" target="_blank" rel="noopener noreferrer">
+         <a href="https://www.facebook.com/profile.php?id=100081058492090" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <i class="bx bxl-facebook-square"></i>
          </a>
       </div>
       <div class="media-container">
-         <a href="https://www.linkedin.com/in/zhiheng-zheng-623387235" target="_blank" rel="noopener noreferrer">
+         <a href="https://www.linkedin.com/in/zhiheng-zheng-623387235" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i class="bx bxl-linkedin"></i>
          </a>
       </div>
       <div class="media-container">
-         <a href="https://github.com/isaac-0414" target="_blank" rel="noopener noreferrer">
+         <a href="https://github.com/isaac-0414" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i class="bx bxl-github"></i>
          </a>
       </div>
       <div class="media-container">
-         <a href="https://www.instagram.com/lssaczheng/" target="_blank" rel="noopener noreferrer">
+         <a href="https://www.instagram.com/z.zhiheng.isaac/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <i class="bx bxl-instagram-alt"></i>
          </a>
       </div>
@@ -196,6 +208,6 @@
    </div>
    <canvas id="bg_hacker"></canvas>
    
-   <script type="module" src="dist/bundle.js"></script>
+   <script type="module" src="/src/app.ts"></script>
 </body>
 </html>
