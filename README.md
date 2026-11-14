@@ -1,4 +1,4 @@
-# Isaac's Portfolio Website
+# My Portfolio Website
 
 A modern personal portfolio website built with TypeScript, Webpack, and vanilla HTML/CSS. Showcasing skills, projects, education, and contact information.
 
@@ -228,15 +228,3 @@ rm -rf dist/
 # Rebuild
 npm run build
 ```
-
-## 📄 License
-
-ISC License
-
-## 👤 Author
-
-Isaac Zheng
-
----
-
-For questions or suggestions, feel free to open an Issue or Pull Request!
