@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-A modern personal portfolio website built with TypeScript, Webpack, and vanilla HTML/CSS. Showcasing skills, projects, education, and contact information.
+A modern personal portfolio website built with TypeScript, Vite, and vanilla HTML/CSS. Showcasing skills, projects, education, and contact information.
 
 Visit online: [http://isaaczheng.com](http://isaaczheng.com)
 
@@ -204,7 +204,7 @@ Sign up for a free account at [EmailJS](https://www.emailjs.com/) to get these I
 2. **Components**: Create reusable function modules
 3. **Styling**: Use modular CSS organization
 4. **Testing**: Consider adding unit and integration tests
-5. **Performance**: Leverage Webpack code splitting and lazy loading
+5. **Performance**: Leverage Vite code splitting and lazy loading
 
 ## 🐛 Troubleshooting
 
@@ -213,7 +213,7 @@ Sign up for a free account at [EmailJS](https://www.emailjs.com/) to get these I
 # Remove node_modules and reinstall
 rm -rf node_modules package-lock.json
 npm install
-npm start
+npm run dev
 ```
 
 ### Email functionality not working

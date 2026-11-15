@@ -15,10 +15,13 @@
 }
 
 .modal {
-   height: 90%;
+   max-height: 90vh;
    width: 700px;
    background: #fff;
    position: relative;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
 }
 
 .modal * {
@@ -27,21 +30,25 @@
 
 .modal .modal_upper {
    width: 100%;
-   height: max-content;
+   flex-shrink: 0;
 }
 
 .modal .modal_upper img {
+   display: block;
    width: 100%;
+   max-height: 45vh;
+   object-fit: cover;
    border-bottom: 4px solid black;
 }
 
 .modal .modal_lower {
    width: 100%;
-   padding: 35px 60px 90px 25px;
-   position: absolute;
-   bottom: 0;
-   left: 0;
+   padding: 25px 35px;
    background: #fff;
+   display: flex;
+   flex-direction: column;
+   flex: 1 1 auto;
+   min-height: 0;
 }
 
 .modal .modal_lower .header {
@@ -73,21 +80,19 @@
    font-size: 16px;
    color: black;
    font-weight: 400;
-   height: calc(25vh - 60px - 90px);
-   overflow: hidden;
-   overflow-y: scroll;
+   flex: 1 1 auto;
+   min-height: 0;
+   overflow-y: auto;
+   margin-bottom: 15px;
 }
 
 .modal .toolbar {
-   height: 90px;
    width: 100%;
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   padding: 0 35px;
+   padding-top: 10px;
    display: flex;
    align-items: center;
    justify-content: space-between;
+   flex-shrink: 0;
 }
 
 .modal .toolbar .view_site {
@@ -134,7 +139,7 @@
    
    .modal .modal_lower {
       width: 100%;
-      padding: 20px 30px 80px 20px;
+      padding: 20px 30px;
    }
    
    .modal .modal_lower .header .title {
@@ -153,7 +158,6 @@
    
    .modal .modal_lower .description {
       font-size: 14px;
-      height: calc(40vh - 136px - 80px);
    }
    
    .modal .toolbar {
@@ -185,7 +189,7 @@
    
    .modal .modal_lower {
       width: 100%;
-      padding: 20px 30px 80px 20px;
+      padding: 20px 30px;
    }
    
    .modal .modal_lower .header .title {
@@ -204,7 +208,6 @@
    
    .modal .modal_lower .description {
       font-size: 14px;
-      height: calc(40vh - 136px - 80px);
    }
    
    .modal .toolbar {

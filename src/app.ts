@@ -1,7 +1,7 @@
 // Created by Isaac Zheng at August, 2022
-// Styles are imported here so Vite bundles, minifies and content-hashes them.
+// boxicons is bundled via JS import; main.css is loaded as a render-blocking
+// <link> in index.html so there is no flash of unstyled content on first paint.
 import "boxicons/css/boxicons.min.css";
-import "../css/main.css";
 import { initialize } from "./util/initialize";
 import {
   menu,

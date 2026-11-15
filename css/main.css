@@ -43,3 +43,19 @@ body {
   /* this line below fixes the z-index bug of safari*/
   transform: translate3d(0, 0, 0);
 }
+
+/* hacker/matrix background canvas: always fill the viewport and sit behind
+   everything. The drawing buffer (width/height attributes) is resized in JS on
+   window resize; this CSS guarantees it visually covers the screen at all times
+   (e.g. when the window is enlarged from a small size) and never causes a
+   layout jump on first load. */
+#bg_hacker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  display: block;
+  background-color: #000;
+}

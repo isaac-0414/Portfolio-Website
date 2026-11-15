@@ -23,10 +23,10 @@
 }
 
 .skills-cat .cat-title {
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 700;
   color: limegreen;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .skills-cat .skill-tags {
@@ -42,7 +42,7 @@
   border: 1px solid limegreen;
   border-radius: 5px;
   padding: 6px 13px;
-  font-size: 24px;
+  font-size: 19px;
   font-weight: 600;
   background: rgba(50, 205, 50, 0.08);
   transition: all 0.2s ease;
@@ -106,6 +106,24 @@
   .skills-cat .skill-tags li {
     font-size: 14px;
     padding: 5px 10px;
+  }
+}
+
+/* windowed desktop: keep things a touch smaller than full-screen */
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+  .skills-cat {
+    margin: 18px 0;
+  }
+  .skills-cat .cat-title {
+    font-size: 23px;
+    margin-bottom: 12px;
+  }
+  .skills-cat .skill-tags {
+    gap: 10px;
+  }
+  .skills-cat .skill-tags li {
+    font-size: 16px;
+    padding: 5px 11px;
   }
 }
 

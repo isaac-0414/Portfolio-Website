@@ -53,7 +53,7 @@ const projects_content = `
 
 const projects = [
    {
-      img_src: "images/ot-kv.svg",
+      img_src: "images/ot-kv.png",
       title: "Optimal Transport for KV-Cache Compression (OT-KV)",
       tech_used: "PyTorch, LLM, Optimal Transport, CUDA",
       description: `A Hugging Face-compatible method that compresses an LLM's KV-cache by redistributing evicted tokens' value 
@@ -65,7 +65,7 @@ const projects = [
       tag: [ProjectsFilter.AI, ProjectsFilter.systems]
    },
    {
-      img_src: "images/riscv.svg",
+      img_src: "images/riscv.png",
       title: "7-Stage Pipelined RISC-V Processor",
       tech_used: "SystemVerilog, Computer Architecture",
       description: `A 32-bit, 7-stage pipelined processor microarchitecture built from scratch in SystemVerilog with full 
@@ -77,7 +77,7 @@ const projects = [
       tag: [ProjectsFilter.systems]
    },
    {
-      img_src: "images/uvm-compiler.svg",
+      img_src: "images/uvm-compiler.png",
       title: "UVM-to-RTL Synthesis Compiler",
       tech_used: "SystemVerilog, UVM, Compilers, RTL",
       description: `A source-to-source compiler that maps high-level object-oriented SystemVerilog (UVM) into a synthesizable 
